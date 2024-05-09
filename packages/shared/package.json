@@ -1,0 +1,38 @@
+{
+    "name": "@filego/shared",
+    "version": "0.1.0",
+    "description": "Internal functions shared by FileGo",
+    "keywords": [
+        "FileGo",
+        "split",
+        "separate",
+        "check",
+        "merge",
+        "combine",
+        "fs",
+        "tool",
+        "util",
+        "file",
+        "files",
+        "buffer",
+        "buffers",
+        "blob",
+        "blobs",
+        "ts",
+        "TypeScript",
+        "js",
+        "JavaScript"
+    ],
+    "homepage": "https://github.com/alpheustangs/filego",
+    "bugs": "https://github.com/alpheustangs/filego/issues",
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "files": ["dist"],
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheustangs/filego.git",
+        "directory": "packages/shared"
+    }
+}

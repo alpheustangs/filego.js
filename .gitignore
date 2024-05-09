@@ -1,0 +1,14 @@
+# Caches
+__MACOSX/
+.DS_Store
+
+# Builds
+dist/
+.media/
+
+# Modules
+node_modules/
+
+# Logs
+*.log
+pnpm-debug.log*

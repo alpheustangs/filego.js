@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "stormode dev",
+        "build": "tsc && stormode build",
+        "preview": "stormode preview"
+    },
+    "dependencies": {
+        "@fastify/cors": "^9.0.1",
+        "@fastify/multipart": "^8.2.0",
+        "@filego/node": "workspace:^",
+        "fastify": "^4.26.2",
+        "fs-extra": "^11.2.0",
+        "stormode-terminal": "^0.2.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/node": "^20.12.10",
+        "stormode": "^0.5.2",
+        "typescript": "^5.4.5"
+    }
+}

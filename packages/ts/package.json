@@ -1,0 +1,42 @@
+{
+    "name": "@filego/ts",
+    "version": "0.1.0",
+    "description": "Solution for splitting, checking, and merging files",
+    "keywords": [
+        "FileGo",
+        "split",
+        "separate",
+        "check",
+        "merge",
+        "combine",
+        "fs",
+        "tool",
+        "util",
+        "file",
+        "files",
+        "buffer",
+        "buffers",
+        "blob",
+        "blobs",
+        "frontend",
+        "ts",
+        "TypeScript",
+        "js",
+        "JavaScript"
+    ],
+    "homepage": "https://github.com/alpheustangs/filego",
+    "bugs": "https://github.com/alpheustangs/filego/issues",
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "files": ["dist"],
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheustangs/filego.git",
+        "directory": "packages/ts"
+    },
+    "dependencies": {
+        "@filego/shared": "workspace:^"
+    }
+}

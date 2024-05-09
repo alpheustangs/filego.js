@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "Node10",
+        "resolveJsonModule": true,
+        "declaration": true,
+        "downlevelIteration": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "alwaysStrict": true,
+        "skipLibCheck": true
+    }
+}

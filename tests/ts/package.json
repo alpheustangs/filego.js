@@ -1,0 +1,18 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "vitest run"
+    },
+    "dependencies": {
+        "@filego/ts": "workspace:^",
+        "@test/shared": "workspace:^",
+        "fs-extra": "^11.2.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "jsdom": "^24.0.0",
+        "vite": "^5.2.11",
+        "vitest": "^1.6.0"
+    }
+}
