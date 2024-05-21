@@ -1,6 +1,6 @@
 {
     "name": "@filego/ts",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Solution for splitting, checking and merging files",
     "keywords": [
         "FileGo",
