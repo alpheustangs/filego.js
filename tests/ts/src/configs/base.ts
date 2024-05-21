@@ -10,7 +10,7 @@ const inRoot: string = path.resolve(process.cwd(), "assets");
 
 const fileNames: string[] = ["0b.txt", "50KB.txt", "2MB.txt", "4MB.txt"];
 
-const inPaths: string[] = getInputs({
+const inFiles: string[] = getInputs({
     dir: inRoot,
     fileNames,
 });
@@ -19,4 +19,4 @@ const inPaths: string[] = getInputs({
 
 const chunkSize: number = 1 * 1024 * 1024;
 
-export { inRoot, fileNames, inPaths, chunkSize };
+export { inRoot, fileNames, inFiles, chunkSize };

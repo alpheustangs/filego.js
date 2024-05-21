@@ -2,11 +2,11 @@ import type { ReadStream } from "node:fs";
 
 type _SplitOptions = {
     /**
-     * input path
+     * path to input file
      */
-    inPath: string;
+    inFile: string;
     /**
-     * output directory
+     * path to output directory
      */
     outDir: string;
     /**
@@ -38,10 +38,10 @@ type SplitOptions = _SplitOptions & {
 };
 
 const split = async (options: SplitOptions): Promise<SplitResult> => {
-    const { inPath, outDir, chunkSize, splitFunction }: SplitOptions = options;
+    const { inFile, outDir, chunkSize, splitFunction }: SplitOptions = options;
 
-    if (typeof inPath !== "string") {
-        throw new TypeError("inPath is not a path in string");
+    if (typeof inFile !== "string") {
+        throw new TypeError("inFile is not a path in string");
     }
 
     if (typeof outDir !== "string") {
@@ -59,7 +59,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     /* custom split function */
 
     if (splitFunction)
-        return await splitFunction({ inPath, outDir, chunkSize });
+        return await splitFunction({ inFile, outDir, chunkSize });
 
     /* split tunnel */
 
@@ -67,11 +67,11 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     const fsp = await import("node:fs/promises");
     const path = await import("node:path");
 
-    if (!fs.existsSync(inPath)) {
+    if (!fs.existsSync(inFile)) {
         throw new Error("Input path not found");
     }
 
-    if (!fs.statSync(inPath).isFile()) {
+    if (!fs.statSync(inFile).isFile()) {
         throw new TypeError("Input path is not a file");
     }
 
@@ -85,7 +85,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     let index: number = 0;
 
     await new Promise((resolve, reject): void => {
-        const readStream: ReadStream = fs.createReadStream(inPath);
+        const readStream: ReadStream = fs.createReadStream(inFile);
 
         let current: Buffer = Buffer.alloc(0);
 

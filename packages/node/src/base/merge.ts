@@ -2,13 +2,13 @@ import type { WriteStream } from "node:fs";
 
 type _MergeOptions = {
     /**
-     * input directory
+     * path to input directory
      */
     inDir: string;
     /**
-     * output path
+     * path to output file
      */
-    outPath: string;
+    outFile: string;
 };
 
 type MergeFunctionOptions = _MergeOptions;
@@ -21,14 +21,14 @@ type MergeOptions = _MergeOptions & {
 };
 
 const merge = async (options: MergeOptions): Promise<void> => {
-    const { inDir, outPath, mergeFunction }: MergeOptions = options;
+    const { inDir, outFile, mergeFunction }: MergeOptions = options;
 
     if (typeof inDir !== "string") {
         throw new TypeError("inDir is not a directory in string");
     }
 
-    if (typeof outPath !== "string") {
-        throw new TypeError("outPath is not a path in string");
+    if (typeof outFile !== "string") {
+        throw new TypeError("outFile is not a path in string");
     }
 
     if (mergeFunction && typeof mergeFunction !== "function") {
@@ -37,7 +37,7 @@ const merge = async (options: MergeOptions): Promise<void> => {
 
     /* custom merge function */
 
-    if (mergeFunction) return await mergeFunction({ inDir, outPath });
+    if (mergeFunction) return await mergeFunction({ inDir, outFile });
 
     /* merge function */
 
@@ -55,11 +55,11 @@ const merge = async (options: MergeOptions): Promise<void> => {
     }
 
     // remove and create
-    if (fs.existsSync(outPath)) {
-        await fsp.rm(outPath, { recursive: true });
+    if (fs.existsSync(outFile)) {
+        await fsp.rm(outFile, { recursive: true });
     }
 
-    await fsp.mkdir(path.dirname(outPath), { recursive: true });
+    await fsp.mkdir(path.dirname(outFile), { recursive: true });
 
     // count files
     const length: number = await fsp
@@ -68,7 +68,7 @@ const merge = async (options: MergeOptions): Promise<void> => {
 
     // write
     await new Promise((resolve, reject): void => {
-        const stream: WriteStream = fs.createWriteStream(outPath, {
+        const stream: WriteStream = fs.createWriteStream(outFile, {
             flags: "a",
         });
 

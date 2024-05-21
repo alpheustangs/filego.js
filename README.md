@@ -71,7 +71,7 @@ Split files from a file path to a directory directly. It will only return the `f
 import { split } from "@filego/node";
 
 await split({
-    inPath: "/path/to/file.txt",
+    inFile: "/path/to/file.txt",
     outDir: "/path/to/dir",
     chunkSize: 1 * 1024 * 1024,
 });
@@ -100,7 +100,7 @@ import { merge } from "@filego/node";
 
 await merge({
     inDir: "/path/to/dir",
-    outPath: "/path/to/file.txt",
+    outFile: "/path/to/file.txt",
 });
 ```
 

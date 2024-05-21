@@ -31,7 +31,7 @@ const mergeFile = async (
 
         await merge({
             inDir: path.join(cacheRoot, id),
-            outPath: path.join(uploadRoot, id, name),
+            outFile: path.join(uploadRoot, id, name),
         });
 
         return reply.code(200).send({

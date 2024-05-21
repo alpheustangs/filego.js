@@ -8,16 +8,16 @@ import { describe, expect, it } from "vitest";
 
 import { getMemUsage } from "@test/shared";
 
-import { chunkSize, fileNames, inPaths } from "../configs/base";
+import { chunkSize, fileNames, inFiles } from "../configs/base";
 
 import { blobToBase64 } from "../functions/blobToBase64";
 
 describe("tests for split, check and merge", (): void => {
-    for (let i: number = 0; i < inPaths.length; i++) {
+    for (let i: number = 0; i < inFiles.length; i++) {
         const file: string = fileNames[i];
         const fileName: string = file.split(".")[0];
 
-        const inPath: string = inPaths[i];
+        const inFile: string = inFiles[i];
 
         let fileSize: number = 0;
         let totalChunks: number = 0;
@@ -25,7 +25,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split base64 data", async (): Promise<void> => {
             const fileData: string = await blobToBase64(
-                new Blob([await fse.readFile(inPath)]),
+                new Blob([await fse.readFile(inFile)]),
             );
 
             const result: SplitResult = await split({
@@ -39,7 +39,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split Uint8Array", async (): Promise<void> => {
             const fileData: Uint8Array = new Uint8Array(
-                await fse.readFile(inPath),
+                await fse.readFile(inFile),
             );
 
             const result: SplitResult = await split({
@@ -53,7 +53,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split File", async (): Promise<void> => {
             const fileData: File = new File(
-                [await fse.readFile(inPath)],
+                [await fse.readFile(inFile)],
                 fileName,
             );
 

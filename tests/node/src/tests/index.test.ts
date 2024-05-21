@@ -21,19 +21,19 @@ import {
     cacheRoot,
     chunkSize,
     fileNames,
-    inPaths,
+    inFiles,
     outRoot,
 } from "../configs/base";
 
 describe("tests for split, check and merge", (): void => {
-    for (let i: number = 0; i < inPaths.length; i++) {
+    for (let i: number = 0; i < inFiles.length; i++) {
         const file: string = fileNames[i];
         const fileName: string = file.split(".")[0];
         const fileExt: string = file.split(".").pop() ?? "";
 
-        const inPath: string = inPaths[i];
+        const inFile: string = inFiles[i];
         const cacheDir: string = path.resolve(cacheRoot, fileName);
-        const outPath: string = path.resolve(
+        const outFile: string = path.resolve(
             outRoot,
             `${fileName}-result.${fileExt}`,
         );
@@ -43,7 +43,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split into chunks", async (): Promise<void> => {
             const result: NodeSplitResult = await nodeSplit({
-                inPath: inPath,
+                inFile: inFile,
                 outDir: cacheDir,
                 chunkSize,
             });
@@ -98,12 +98,12 @@ describe("tests for split, check and merge", (): void => {
         it("should be able to merge to file", async (): Promise<void> => {
             await nodeMerge({
                 inDir: cacheDir,
-                outPath: outPath,
+                outFile: outFile,
             });
 
             getMemUsage({ name: "@filego/node merge" });
 
-            expect(await fse.exists(outPath)).toBe(true);
+            expect(await fse.exists(outFile)).toBe(true);
         });
     }
 });
