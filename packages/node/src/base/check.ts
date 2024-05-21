@@ -81,22 +81,30 @@ const check = async (options: CheckOptions): Promise<CheckResult> => {
     // missing part
     if (missing.length > 0) {
         return {
-            status: "error",
-            error: "missing",
-            missing,
+            success: false,
+            error: {
+                type: "missing",
+                message: "missing chunk(s)",
+                missing,
+            },
         };
     }
 
     // not the same size
     if (actualSize !== fileSize) {
         return {
-            status: "error",
-            error: "size",
+            success: false,
+            error: {
+                type: "size",
+                message:
+                    "the size of chunks is not equal to `fileSize` parameter",
+            },
         };
     }
 
+    // success
     return {
-        status: "success",
+        success: true,
     };
 };
 

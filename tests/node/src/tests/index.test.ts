@@ -68,8 +68,8 @@ describe("tests for split, check and merge", (): void => {
                 inDir: cacheDir,
             });
 
-            expect(result.status).toBe("error");
-            expect(result.error).toBe("missing");
+            expect(result.success).toBe(false);
+            !result.success && expect(result.error?.type).toBe("missing");
         });
 
         it("should not pass the check with error: size ", async (): Promise<void> => {
@@ -79,8 +79,8 @@ describe("tests for split, check and merge", (): void => {
                 inDir: cacheDir,
             });
 
-            expect(result.status).toBe("error");
-            expect(result.error).toBe("size");
+            expect(result.success).toBe(false);
+            !result.success && expect(result.error?.type).toBe("size");
         });
 
         it("should pass the check", async (): Promise<void> => {
@@ -92,7 +92,7 @@ describe("tests for split, check and merge", (): void => {
 
             getMemUsage({ name: "@filego/node check" });
 
-            expect(result.status).toBe("success");
+            expect(result.success).toBe(true);
         });
 
         it("should be able to merge to file", async (): Promise<void> => {
