@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "format": "biome check . --apply",
+        "format": "biome check --write .",
         "build": "npm-run-all --sequential build:shared build:node build:ts",
         "build:shared": "cd ./packages/shared && tsc && tsc-alias",
         "build:node": "cd ./packages/node && tsc && tsc-alias",
