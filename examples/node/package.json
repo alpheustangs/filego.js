@@ -15,7 +15,7 @@
     },
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
-        "@types/node": "^20.14.1",
+        "@types/node": "^20.14.2",
         "stormode": "^0.5.2",
         "typescript": "^5.4.5"
     }
