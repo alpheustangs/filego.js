@@ -1,7 +1,7 @@
 {
     "name": "@filego/node",
     "version": "0.2.0",
-    "description": "Solution for splitting, checking and merging files",
+    "description": "A solution for splitting, checking and merging files",
     "keywords": [
         "FileGo",
         "split",
