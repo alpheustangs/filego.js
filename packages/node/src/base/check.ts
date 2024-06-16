@@ -27,13 +27,10 @@ type CheckOptions = _CheckOptions & {
  * ```typescript
  * import { check } from "@filego/node";
  *
- * const fileSize: number = // ...
- * const totalChunks: number = // ...
- *
  * await check({
  *     inDir: "/path/to/dir",
- *     fileSize,
- *     totalChunks,
+ *     fileSize: 0, // result from split function...
+ *     totalChunks: 0, // result from split function...
  * });
  * ```
  */

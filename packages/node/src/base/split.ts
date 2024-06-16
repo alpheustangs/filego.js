@@ -60,12 +60,12 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
         throw new TypeError("splitFunction is not a function");
     }
 
-    /* custom split function */
+    // custom split function
 
     if (splitFunction)
         return await splitFunction({ inFile, outDir, chunkSize });
 
-    /* split tunnel */
+    // split tunnel
 
     const fs = await import("node:fs");
     const fsp = await import("node:fs/promises");

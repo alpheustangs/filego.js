@@ -41,9 +41,9 @@ Check file integrity by verifying the `chunks` with `fileSize` and `totalChunks`
 import { check } from "@filego/ts";
 
 await check({
-    chunks: [ /* ... */ ],
-    fileSize: 123456789,
-    totalChunks: 10,
+    chunks: [], // result from split function...
+    fileSize: 0, // result from split function...
+    totalChunks: 0, // result from split function...
 });
 ```
 
@@ -55,7 +55,7 @@ Merge the chunks by using the `chunks` parameters. It will return the `blob` and
 import { merge } from "@filego/ts";
 
 await merge({
-    chunks: [ /* ... */ ],
+    chunks: [], // result from split function...
 });
 ```
 
@@ -86,8 +86,8 @@ import { check } from "@filego/node";
 
 await check({
     inDir: "/path/to/dir",
-    fileSize: 123456789,
-    totalChunks: 10,
+    fileSize: 0, // result from split function...
+    totalChunks: 0, // result from split function...
 });
 ```
 

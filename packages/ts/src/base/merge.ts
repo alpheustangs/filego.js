@@ -33,10 +33,8 @@ type MergeOptions = _MergeOptions & {
  * import type { Chunk } from "@filego/ts";
  * import { merge } from "@filego/ts";
  *
- * const chunks: Chunk[] = // ...
- *
  * await merge({
- *     chunks,
+ *     chunks: [], // result from split function...
  * });
  * ```
  */

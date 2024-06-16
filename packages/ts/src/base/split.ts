@@ -65,7 +65,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
         throw new TypeError("splitFunction is not a function");
     }
 
-    /* custom split function */
+    // custom split function
 
     if (splitFunction) return await splitFunction({ file, chunkSize });
 
