@@ -3,17 +3,11 @@ import type { CheckResult, Chunk } from "@filego/shared";
 import { isTypeOfChunk, sortChunks } from "@filego/shared";
 
 type _CheckOptions = {
-    /**
-     * chunks
-     */
+    /** chunks */
     chunks: Chunk[];
-    /**
-     * size of the original file
-     */
+    /** size of the original file */
     fileSize: number;
-    /**
-     * how many chunks in total
-     */
+    /** how many chunks in total */
     totalChunks: number;
 };
 
@@ -25,6 +19,27 @@ type CheckOptions = _CheckOptions & {
     ) => CheckResult | Promise<CheckResult>;
 };
 
+/**
+ * Check file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters.
+ * It will return the `status` and the `error` of the check.
+ *
+ * ## Example
+ *
+ * ```typescript
+ * import type { Chunk } from "@filego/ts";
+ * import { check } from "@filego/ts";
+ *
+ * const chunks: Chunk[] = // ...
+ * const fileSize: number = // ...
+ * const totalChunks: number = // ...
+ *
+ * await check({
+ *     chunks,
+ *     fileSize,
+ *     totalChunks,
+ * });
+ * ```
+ */
 const check = async (options: CheckOptions): Promise<CheckResult> => {
     const { chunks, fileSize, totalChunks, checkFunction }: CheckOptions =
         options;

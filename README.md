@@ -22,7 +22,7 @@ Usage of different functions in `@filego/ts`:
 
 #### `split`
 
-Split files into chunks, and the chunks can be used to check and merge later. It will return the `fileSize`, `totalChunks` and the `chunks`.
+Split files into chunks, and the chunks can be used to check and merge later. It will return the `chunks`, `fileSize` and `totalChunks`.
 
 ```typescript
 import { split } from "@filego/ts";

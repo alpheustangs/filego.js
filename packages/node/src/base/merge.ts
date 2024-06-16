@@ -1,25 +1,34 @@
 import type { WriteStream } from "node:fs";
 
 type _MergeOptions = {
-    /**
-     * path to input directory
-     */
+    /** path to input directory */
     inDir: string;
-    /**
-     * path to output file
-     */
+    /** path to output file */
     outFile: string;
 };
 
 type MergeFunctionOptions = _MergeOptions;
 
 type MergeOptions = _MergeOptions & {
-    /**
-     * custom merge function
-     */
+    /** custom merge function */
     mergeFunction?: (options: MergeFunctionOptions) => void | Promise<void>;
 };
 
+/**
+ * Merge the chunks from a directory to a specified path directly.
+ * Therefore, nothing will be returned.
+ *
+ * ## Example
+ *
+ * ```typescript
+ * import { merge } from "@filego/node";
+ *
+ * await merge({
+ *     inDir: "/path/to/dir",
+ *     outFile: "/path/to/file.txt",
+ * });
+ * ```
+ */
 const merge = async (options: MergeOptions): Promise<void> => {
     const { inDir, outFile, mergeFunction }: MergeOptions = options;
 
@@ -35,11 +44,11 @@ const merge = async (options: MergeOptions): Promise<void> => {
         throw new TypeError("mergeFunction is not a function");
     }
 
-    /* custom merge function */
+    // custom merge function
 
     if (mergeFunction) return await mergeFunction({ inDir, outFile });
 
-    /* merge function */
+    // merge function
 
     const fs = await import("node:fs");
     const fsp = await import("node:fs/promises");

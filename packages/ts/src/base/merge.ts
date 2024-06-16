@@ -3,34 +3,43 @@ import type { Chunk } from "@filego/shared";
 import { isTypeOfChunk, sortChunks } from "@filego/shared";
 
 type _MergeOptions = {
-    /**
-     * chunks to merge
-     */
+    /** chunks to merge */
     chunks: Chunk[];
 };
 
 type MergeFunctionOptions = _MergeOptions;
 
 type MergeResult = {
-    /**
-     * merged blob
-     */
+    /** merged blob */
     blob: Blob;
-    /**
-     * merged buffer
-     */
+    /** merged buffer */
     buffer: Buffer;
 };
 
 type MergeOptions = _MergeOptions & {
-    /**
-     * custom merge function
-     */
+    /** custom merge function */
     mergeFunction?: (
         options: MergeFunctionOptions,
     ) => MergeResult | Promise<MergeResult>;
 };
 
+/**
+ * Merge the chunks by using the `chunks` parameters.
+ * It will return the `blob` and `buffer` of the merged file.
+ *
+ * ## Example
+ *
+ * ```typescript
+ * import type { Chunk } from "@filego/ts";
+ * import { merge } from "@filego/ts";
+ *
+ * const chunks: Chunk[] = // ...
+ *
+ * await merge({
+ *     chunks,
+ * });
+ * ```
+ */
 const merge = async (options: MergeOptions): Promise<MergeResult> => {
     const { chunks, mergeFunction }: MergeOptions = options;
 
@@ -42,11 +51,11 @@ const merge = async (options: MergeOptions): Promise<MergeResult> => {
         throw new TypeError("mergeFunction is not a function");
     }
 
-    /* custom merge function */
+    // custom merge function
 
     if (mergeFunction) return await mergeFunction({ chunks });
 
-    /* merge function */
+    // merge function
 
     const blob: Blob = new Blob(
         sortChunks(chunks).map((chunk: Chunk): Blob => chunk.blob),

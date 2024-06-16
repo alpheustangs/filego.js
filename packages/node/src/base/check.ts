@@ -1,17 +1,11 @@
 import type { CheckResult } from "@filego/shared";
 
 type _CheckOptions = {
-    /**
-     * input Directory
-     */
+    /** input Directory */
     inDir: string;
-    /**
-     * size of the original file
-     */
+    /** size of the original file */
     fileSize: number;
-    /**
-     * how many chunks in total
-     */
+    /** how many chunks in total */
     totalChunks: number;
 };
 
@@ -23,6 +17,26 @@ type CheckOptions = _CheckOptions & {
     ) => CheckResult | Promise<CheckResult>;
 };
 
+/**
+ * Check file integrity by verifying the the chunks specified
+ * in the `inDir` with `fileSize`, `totalChunks` parameters.
+ * It will return the `status` and the `error` of the check.
+ *
+ * ## Example
+ *
+ * ```typescript
+ * import { check } from "@filego/node";
+ *
+ * const fileSize: number = // ...
+ * const totalChunks: number = // ...
+ *
+ * await check({
+ *     inDir: "/path/to/dir",
+ *     fileSize,
+ *     totalChunks,
+ * });
+ * ```
+ */
 const check = async (options: CheckOptions): Promise<CheckResult> => {
     const { inDir, fileSize, totalChunks, checkFunction }: CheckOptions =
         options;

@@ -1,42 +1,46 @@
 import type { ReadStream } from "node:fs";
 
 type _SplitOptions = {
-    /**
-     * path to input file
-     */
+    /** path to input file */
     inFile: string;
-    /**
-     * path to output directory
-     */
+    /** path to output directory */
     outDir: string;
-    /**
-     * size of each chunk in byte
-     */
+    /** size of each chunk in byte */
     chunkSize: number;
 };
 
 type SplitFunctionOptions = _SplitOptions;
 
 type SplitResult = {
-    /**
-     * size of the original file
-     */
+    /** size of the original file */
     fileSize: number;
-    /**
-     * how many chunks in total
-     */
+    /** how many chunks in total */
     totalChunks: number;
 };
 
 type SplitOptions = _SplitOptions & {
-    /**
-     * custom split function
-     */
+    /** custom split function */
     splitFunction?: (
         options: SplitFunctionOptions,
     ) => SplitResult | Promise<SplitResult>;
 };
 
+/**
+ * Split files from a file path to a directory directly.
+ * It will only return the `fileSize` and the `totalChunks` of the file.
+ *
+ * ## Example
+ *
+ * ```typescript
+ * import { split } from "@filego/node";
+ *
+ * await split({
+ *     inFile: "/path/to/file.txt",
+ *     outDir: "/path/to/dir",
+ *     chunkSize: 1 * 1024 * 1024,
+ * });
+ * ```
+ */
 const split = async (options: SplitOptions): Promise<SplitResult> => {
     const { inFile, outDir, chunkSize, splitFunction }: SplitOptions = options;
 

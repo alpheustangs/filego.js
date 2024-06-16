@@ -1,11 +1,7 @@
 type Chunk = {
-    /**
-     * the index of the chunk
-     */
+    /** the index of the chunk */
     index: number;
-    /**
-     * blob data
-     */
+    /** blob data */
     blob: Blob;
 };
 

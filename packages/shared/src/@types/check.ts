@@ -5,9 +5,7 @@ type CheckResultError =
            * - `size` - the size of chunks is not equal to `fileSize` parameter
            */
           type: "size";
-          /**
-           * error message
-           */
+          /** error message */
           message: string;
       }
     | {
@@ -16,31 +14,21 @@ type CheckResultError =
            * - `missing` - missing chunk(s)
            */
           type: "missing";
-          /**
-           * error message
-           */
+          /** error message */
           message: string;
-          /**
-           * missing chunk(s)
-           */
+          /** missing chunk(s) */
           missing: number[];
       };
 
 type CheckResult =
     | {
-          /**
-           * success
-           */
+          /** success */
           success: true;
       }
     | {
-          /**
-           * fail
-           */
+          /** failed */
           success: false;
-          /**
-           * error
-           */
+          /** error */
           error: CheckResultError;
       };
 

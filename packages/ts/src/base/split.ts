@@ -8,33 +8,23 @@ type _SplitOptions = {
      * - Base64 data prefixed with "data:"
      */
     file: File | Blob | Uint8Array | string;
-    /**
-     * size of each chunk in byte
-     */
+    /** size of each chunk in byte */
     chunkSize: number;
 };
 
 type SplitFunctionOptions = _SplitOptions;
 
 type SplitResult = {
-    /**
-     * chunks
-     */
+    /** chunks */
     chunks: Chunk[];
-    /**
-     * size of the original file
-     */
+    /** size of the original file */
     fileSize: number;
-    /**
-     * how many chunks in total
-     */
+    /** how many chunks in total */
     totalChunks: number;
 };
 
 type SplitOptions = _SplitOptions & {
-    /**
-     * custom split function
-     */
+    /** custom split function */
     splitFunction?: (
         options: SplitFunctionOptions,
     ) => SplitResult | Promise<SplitResult>;
@@ -43,6 +33,23 @@ type SplitOptions = _SplitOptions & {
 const ermsg: string =
     "file is not a File, Blob, file URI, Uint8Array or Base64 data";
 
+/**
+ * Split files into chunks, and the chunks can be used to check and merge later.
+ * It will return the `chunks`, `fileSize` and `totalChunks`.
+ *
+ * ## Example
+ *
+ * ```typescript
+ * import { split } from "@filego/ts";
+ *
+ * const file: File | Blob | Uint8Array | string = // ...
+ *
+ * await split({
+ *     file,
+ *     chunkSize: 1 * 1024 * 1024, // 1MB
+ * });
+ * ```
+ */
 const split = async (options: SplitOptions): Promise<SplitResult> => {
     const { file, chunkSize, splitFunction }: SplitOptions = options;
 
