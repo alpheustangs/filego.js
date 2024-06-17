@@ -36,8 +36,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/node
       fastify:
-        specifier: ^4.27.0
-        version: 4.27.0
+        specifier: ^4.28.0
+        version: 4.28.0
       fs-extra:
         specifier: ^11.2.0
         version: 11.2.0
@@ -1638,8 +1638,8 @@ packages:
     resolution: {integrity: sha512-stRHYGeuqpEZTL1Ef0Ovr2ltazUT9g844X5z/zEBFLG8RYlpDiOCIG+ATvYEp+/zmc7sN29mcIMp8gvYplYPIQ==}
     dev: false
 
-  /fastify@4.27.0:
-    resolution: {integrity: sha512-ci9IXzbigB8dyi0mSy3faa3Bsj0xWAPb9JeT4KRzubdSb6pNhcADRUaXCBml6V1Ss/a05kbtQls5LBmhHydoTA==}
+  /fastify@4.28.0:
+    resolution: {integrity: sha512-HhW7UHW07YlqH5qpS0af8d2Gl/o98DhJ8ZDQWHRNDnzeOhZvtreWsX8xanjGgXmkYerGbo8ax/n40Dpwqkot8Q==}
     dependencies:
       '@fastify/ajv-compiler': 3.5.0
       '@fastify/error': 3.4.1
