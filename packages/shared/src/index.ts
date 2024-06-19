@@ -1,5 +1,4 @@
-export type { Chunk } from "#/@types/chunk";
+export type { FileChunk } from "#/@types/chunk";
 export type { CheckResult } from "#/@types/check";
 
-export { isTypeOfChunk } from "#/functions/isTypeOfChunk";
-export { sortChunks } from "#/functions/sortChunks";
+export { isTypeOfFileChunks, sortFileChunks } from "#/functions/chunks";

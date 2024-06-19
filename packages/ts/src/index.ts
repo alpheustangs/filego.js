@@ -1,5 +1,5 @@
 // chunk
-export type { Chunk } from "@filego/shared";
+export type { FileChunk } from "@filego/shared";
 
 // split
 export type {

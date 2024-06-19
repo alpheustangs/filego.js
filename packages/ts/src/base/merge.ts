@@ -1,14 +1,16 @@
-import type { Chunk } from "@filego/shared";
+import type { FileChunk } from "@filego/shared";
 
-import { isTypeOfChunk, sortChunks } from "@filego/shared";
+import { isTypeOfFileChunks, sortFileChunks } from "@filego/shared";
 
 type _MergeOptions = {
-    /** chunks to merge */
-    chunks: Chunk[];
+    /** Chunks to be merged in the `merge` function. */
+    chunks: FileChunk[];
 };
 
+/** Options for custom logic in `merge` function. */
 type MergeFunctionOptions = _MergeOptions;
 
+/** Result of `merge` function. */
 type MergeResult = {
     /** merged blob */
     blob: Blob;
@@ -16,8 +18,9 @@ type MergeResult = {
     buffer: Buffer;
 };
 
+/** Options for `merge` function. */
 type MergeOptions = _MergeOptions & {
-    /** custom merge function */
+    /** Custom logic for `merge` function. */
     mergeFunction?: (
         options: MergeFunctionOptions,
     ) => MergeResult | Promise<MergeResult>;
@@ -41,7 +44,7 @@ type MergeOptions = _MergeOptions & {
 const merge = async (options: MergeOptions): Promise<MergeResult> => {
     const { chunks, mergeFunction }: MergeOptions = options;
 
-    if (isTypeOfChunk(chunks) === false) {
+    if (isTypeOfFileChunks(chunks) === false) {
         throw new TypeError("chunks is not an Array of Chunk");
     }
 
@@ -56,7 +59,7 @@ const merge = async (options: MergeOptions): Promise<MergeResult> => {
     // merge function
 
     const blob: Blob = new Blob(
-        sortChunks(chunks).map((chunk: Chunk): Blob => chunk.blob),
+        sortFileChunks(chunks).map((chunk: FileChunk): Blob => chunk.blob),
     );
 
     let buffer: Buffer;

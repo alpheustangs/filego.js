@@ -1,16 +1,18 @@
 import type { WriteStream } from "node:fs";
 
 type _MergeOptions = {
-    /** path to input directory */
+    /** Input directory to be merged in the `merge` function. */
     inDir: string;
-    /** path to output file */
+    /** Output file after merging in the `merge` function. */
     outFile: string;
 };
 
+/** Options for custom logic in `merge` function. */
 type MergeFunctionOptions = _MergeOptions;
 
+/** Options for `merge` function. */
 type MergeOptions = _MergeOptions & {
-    /** custom merge function */
+    /** Custom logic for `merge` function. */
     mergeFunction?: (options: MergeFunctionOptions) => void | Promise<void>;
 };
 

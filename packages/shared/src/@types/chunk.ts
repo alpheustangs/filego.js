@@ -1,8 +1,9 @@
-type Chunk = {
-    /** the index of the chunk */
+/** Chunk contains the index number and the blob data of a file. */
+type FileChunk = {
+    /** Index of chunk. */
     index: number;
-    /** blob data */
+    /** Blob data of chunk. */
     blob: Blob;
 };
 
-export type { Chunk };
+export type { FileChunk };

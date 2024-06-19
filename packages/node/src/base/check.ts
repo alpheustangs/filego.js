@@ -1,17 +1,26 @@
 import type { CheckResult } from "@filego/shared";
 
 type _CheckOptions = {
-    /** input Directory */
+    /** Input directory to be checked in the `check` function. */
     inDir: string;
-    /** size of the original file */
+    /**
+     * Size of the original file,
+     * which can be found as an output of `split` function.
+     */
     fileSize: number;
-    /** how many chunks in total */
+    /**
+     * Total number of chunks in the original file,
+     * which can be found as an output of `split` function.
+     */
     totalChunks: number;
 };
 
+/** Options for custom logic in `check` function. */
 type CheckFunctionOptions = _CheckOptions;
 
+/** Options for `check` function. */
 type CheckOptions = _CheckOptions & {
+    /** Custom logic for `check` function. */
     checkFunction?: (
         options: CheckFunctionOptions,
     ) => CheckResult | Promise<CheckResult>;

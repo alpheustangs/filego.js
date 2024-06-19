@@ -1,25 +1,28 @@
 import type { ReadStream } from "node:fs";
 
 type _SplitOptions = {
-    /** path to input file */
+    /** Input file to be splitted in the `split` function. */
     inFile: string;
-    /** path to output directory */
+    /** Output directory after splitted in the `split` function. */
     outDir: string;
-    /** size of each chunk in byte */
+    /** Size of each chunk in byte to be splitted. */
     chunkSize: number;
 };
 
+/** Options for custom logic in `split` function. */
 type SplitFunctionOptions = _SplitOptions;
 
+/** Result of `split` function. */
 type SplitResult = {
-    /** size of the original file */
+    /** Size of the original file. */
     fileSize: number;
-    /** how many chunks in total */
+    /** The total number of chunks splitted from the original file. */
     totalChunks: number;
 };
 
+/** Options for `split` function. */
 type SplitOptions = _SplitOptions & {
-    /** custom split function */
+    /** Custom logic for `split` function. */
     splitFunction?: (
         options: SplitFunctionOptions,
     ) => SplitResult | Promise<SplitResult>;

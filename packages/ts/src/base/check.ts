@@ -1,19 +1,28 @@
-import type { CheckResult, Chunk } from "@filego/shared";
+import type { CheckResult, FileChunk } from "@filego/shared";
 
-import { isTypeOfChunk, sortChunks } from "@filego/shared";
+import { isTypeOfFileChunks, sortFileChunks } from "@filego/shared";
 
 type _CheckOptions = {
-    /** chunks */
-    chunks: Chunk[];
-    /** size of the original file */
+    /** Chunks to be checked in the `check` function. */
+    chunks: FileChunk[];
+    /**
+     * Size of the original file,
+     * which can be found as the output of `split` function.
+     */
     fileSize: number;
-    /** how many chunks in total */
+    /**
+     * Total number of chunks in the original file,
+     * which can be found as the output of `split` function.
+     */
     totalChunks: number;
 };
 
+/** Options for custom logic in `check` function. */
 type CheckFunctionOptions = _CheckOptions;
 
+/** Options for `check` function. */
 type CheckOptions = _CheckOptions & {
+    /** Custom logic for `check` function. */
     checkFunction?: (
         options: CheckFunctionOptions,
     ) => CheckResult | Promise<CheckResult>;
@@ -40,7 +49,7 @@ const check = async (options: CheckOptions): Promise<CheckResult> => {
     const { chunks, fileSize, totalChunks, checkFunction }: CheckOptions =
         options;
 
-    if (isTypeOfChunk(chunks) === false) {
+    if (isTypeOfFileChunks(chunks) === false) {
         throw new TypeError("chunks is not an Array of Chunk");
     }
 
@@ -65,13 +74,13 @@ const check = async (options: CheckOptions): Promise<CheckResult> => {
         });
     }
 
-    const sorted: Chunk[] = sortChunks(chunks);
+    const sorted: FileChunk[] = sortFileChunks(chunks);
 
     let actualSize: number = 0;
     const missing: number[] = [];
 
     for (let i: number = 0; i < totalChunks; i++) {
-        const chunk: Chunk = sorted[i];
+        const chunk: FileChunk = sorted[i];
 
         if (chunk && chunk.index === i) {
             actualSize += chunk.blob.size;

@@ -1,34 +1,30 @@
-type CheckResultError =
+/** Result error of `check` function. */
+type CheckResultError = {
+    /** Error message of the check. */
+    message: string;
+} & (
     | {
-          /**
-           * error:
-           * - `size` - the size of chunks is not equal to `fileSize` parameter
-           */
-          type: "size";
-          /** error message */
-          message: string;
+          /** Some of the chunks are missing to merge the file. */
+          type: "missing";
+          /** Missing chunk(s) to merge the file. */
+          missing: number[];
       }
     | {
-          /**
-           * error:
-           * - `missing` - missing chunk(s)
-           */
-          type: "missing";
-          /** error message */
-          message: string;
-          /** missing chunk(s) */
-          missing: number[];
-      };
+          /** The size of chunks do not match the `fileSize` parameter. */
+          type: "size";
+      }
+);
 
+/** Result of `check` function. */
 type CheckResult =
     | {
-          /** success */
+          /** Successful check. */
           success: true;
       }
     | {
-          /** failed */
+          /** Failed check. */
           success: false;
-          /** error */
+          /** Error details of the check. */
           error: CheckResultError;
       };
 

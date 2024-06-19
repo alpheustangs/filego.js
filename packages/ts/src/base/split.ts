@@ -1,4 +1,4 @@
-import type { Chunk } from "@filego/shared";
+import type { FileChunk } from "@filego/shared";
 
 type _SplitOptions = {
     /**
@@ -8,23 +8,26 @@ type _SplitOptions = {
      * - Base64 data prefixed with "data:"
      */
     file: File | Blob | Uint8Array | string;
-    /** size of each chunk in byte */
+    /** The size of each chunk in byte. */
     chunkSize: number;
 };
 
+/** Options for custom logic in `split` function. */
 type SplitFunctionOptions = _SplitOptions;
 
+/** Result of `split` function. */
 type SplitResult = {
-    /** chunks */
-    chunks: Chunk[];
-    /** size of the original file */
+    /** The chunks splitted from the original file. */
+    chunks: FileChunk[];
+    /** Size of the original file. */
     fileSize: number;
-    /** how many chunks in total */
+    /** The total number of chunks splitted from the original file. */
     totalChunks: number;
 };
 
+/** Options for `split` function. */
 type SplitOptions = _SplitOptions & {
-    /** custom split function */
+    /** Custom logic for `split` function. */
     splitFunction?: (
         options: SplitFunctionOptions,
     ) => SplitResult | Promise<SplitResult>;
@@ -103,7 +106,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     }
 
     const total: number = Math.ceil(blob.size / chunkSize);
-    const chunks: Chunk[] = [];
+    const chunks: FileChunk[] = [];
 
     for (let i: number = 0; i < total; i++) {
         const offset: number = i * chunkSize;
