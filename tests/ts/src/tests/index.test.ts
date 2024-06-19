@@ -1,4 +1,9 @@
-import type { CheckResult, FileChunk, MergeResult, SplitResult } from "@filego/ts";
+import type {
+    CheckResult,
+    FileChunk,
+    MergeResult,
+    SplitResult,
+} from "@filego/ts";
 
 import * as fse from "fs-extra";
 
