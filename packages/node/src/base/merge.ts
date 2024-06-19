@@ -7,18 +7,18 @@ type _MergeOptions = {
     outFile: string;
 };
 
-/** Options for custom logic in `merge` function. */
+/** Options for the custom logic in the `merge` function. */
 type MergeFunctionOptions = _MergeOptions;
 
-/** Options for `merge` function. */
+/** Options for the `merge` function. */
 type MergeOptions = _MergeOptions & {
-    /** Custom logic for `merge` function. */
+    /** Custom logic for the `merge` function. */
     mergeFunction?: (options: MergeFunctionOptions) => void | Promise<void>;
 };
 
 /**
- * Merge the chunks from a directory to a specified path directly.
- * Therefore, nothing will be returned.
+ * This function merges the chunks from a directory to a specified path directly.
+ * Therefore, nothing will be returned as a result.
  *
  * ## Example
  *

@@ -7,10 +7,10 @@ type _MergeOptions = {
     chunks: FileChunk[];
 };
 
-/** Options for custom logic in `merge` function. */
+/** Options for the custom logic in the `merge` function. */
 type MergeFunctionOptions = _MergeOptions;
 
-/** Result of `merge` function. */
+/** Result of the `merge` function. */
 type MergeResult = {
     /** merged blob */
     blob: Blob;
@@ -18,16 +18,16 @@ type MergeResult = {
     buffer: Buffer;
 };
 
-/** Options for `merge` function. */
+/** Options for the `merge` function. */
 type MergeOptions = _MergeOptions & {
-    /** Custom logic for `merge` function. */
+    /** Custom logic for the `merge` function. */
     mergeFunction?: (
         options: MergeFunctionOptions,
     ) => MergeResult | Promise<MergeResult>;
 };
 
 /**
- * Merge the chunks by using the `chunks` parameters.
+ * This function merges the chunks by using the `chunks` parameters.
  * It will return the `blob` and `buffer` of the merged file.
  *
  * ## Example

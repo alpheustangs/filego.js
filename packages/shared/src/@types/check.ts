@@ -1,4 +1,4 @@
-/** Result error of `check` function. */
+/** Result error of the `check` function. */
 type CheckResultError = {
     /** Error message of the check. */
     message: string;
@@ -15,7 +15,7 @@ type CheckResultError = {
       }
 );
 
-/** Result of `check` function. */
+/** Result of the `check` function. */
 type CheckResult =
     | {
           /** Successful check. */

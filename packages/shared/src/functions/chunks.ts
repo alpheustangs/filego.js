@@ -1,7 +1,7 @@
 import type { FileChunk } from "#/@types/chunk";
 
 /**
- * Check whether the `chunks` parameter is an Array of Chunk.
+ * This function checks whether the `chunks` parameter is an Array of Chunk.
  *
  * ## Example
  *
@@ -31,7 +31,7 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
 };
 
 /**
- * Sort the `chunks` parameter by the `index` property.
+ * This function sorts the `chunks` parameter by the `index` property.
  *
  * ## Example
  *

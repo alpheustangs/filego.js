@@ -9,10 +9,10 @@ type _SplitOptions = {
     chunkSize: number;
 };
 
-/** Options for custom logic in `split` function. */
+/** Options for the custom logic in the `split` function. */
 type SplitFunctionOptions = _SplitOptions;
 
-/** Result of `split` function. */
+/** Result of the `split` function. */
 type SplitResult = {
     /** Size of the original file. */
     fileSize: number;
@@ -20,7 +20,7 @@ type SplitResult = {
     totalChunks: number;
 };
 
-/** Options for `split` function. */
+/** Options for the `split` function. */
 type SplitOptions = _SplitOptions & {
     /** Custom logic for `split` function. */
     splitFunction?: (
@@ -29,7 +29,7 @@ type SplitOptions = _SplitOptions & {
 };
 
 /**
- * Split files from a file path to a directory directly.
+ * This function splits file from a path to a directory directly.
  * It will only return the `fileSize` and the `totalChunks` of the file.
  *
  * ## Example

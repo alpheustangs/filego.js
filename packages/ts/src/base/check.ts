@@ -17,19 +17,19 @@ type _CheckOptions = {
     totalChunks: number;
 };
 
-/** Options for custom logic in `check` function. */
+/** Options for the custom logic in the `check` function. */
 type CheckFunctionOptions = _CheckOptions;
 
-/** Options for `check` function. */
+/** Options for the `check` function. */
 type CheckOptions = _CheckOptions & {
-    /** Custom logic for `check` function. */
+    /** Custom logic for the `check` function. */
     checkFunction?: (
         options: CheckFunctionOptions,
     ) => CheckResult | Promise<CheckResult>;
 };
 
 /**
- * Check file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters.
+ * This function checks file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters.
  * It will return the `status` and the `error` of the check.
  *
  * ## Example

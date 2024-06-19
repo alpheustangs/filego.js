@@ -22,7 +22,7 @@ Usage of different functions in `@filego/ts`:
 
 #### `split`
 
-Split files into chunks, and the chunks can be used to check and merge later. It will return the `chunks`, `fileSize` and `totalChunks`.
+This function splits file into chunks, and the chunks can be used to check and merge later. It will return the `chunks`, `fileSize` and `totalChunks`.
 
 ```typescript
 import { split } from "@filego/ts";
@@ -35,7 +35,7 @@ await split({
 
 #### `check`
 
-Check file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters. It will return the `status` and the `error` of the check.
+This function checks file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
 ```typescript
 import { check } from "@filego/ts";
@@ -49,7 +49,7 @@ await check({
 
 #### `merge`
  
-Merge the chunks by using the `chunks` parameters. It will return the `blob` and `buffer` of the merged file.
+This function merges the chunks by using the `chunks` parameters. It will return the `blob` and `buffer` of the merged file.
 
 ```typescript
 import { merge } from "@filego/ts";
@@ -65,7 +65,7 @@ Usage of different functions in `@filego/node`:
 
 #### `split`
 
-Split files from a file path to a directory directly. It will only return the `fileSize` and the `totalChunks` of the file.
+This function splits file from a path to a directory directly. It will only return the `fileSize` and the `totalChunks` of the file.
 
 ```typescript
 import { split } from "@filego/node";
@@ -79,7 +79,7 @@ await split({
 
 #### `check`
 
-Check file integrity by verifying the the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. It will return the `status` and the `error` of the check.
+This function checks file integrity by verifying the the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
 ```typescript
 import { check } from "@filego/node";
@@ -93,7 +93,7 @@ await check({
 
 #### `merge`
 
-Merge the chunks from a directory to a specified path directly. Therefore, nothing will be returned.
+This function merges the chunks from a directory to a specified path directly. Therefore, nothing will be returned as a result.
 
 ```typescript
 import { merge } from "@filego/node";

@@ -12,10 +12,10 @@ type _SplitOptions = {
     chunkSize: number;
 };
 
-/** Options for custom logic in `split` function. */
+/** Options for the custom logic in the `split` function. */
 type SplitFunctionOptions = _SplitOptions;
 
-/** Result of `split` function. */
+/** Result of the `split` function. */
 type SplitResult = {
     /** The chunks splitted from the original file. */
     chunks: FileChunk[];
@@ -25,9 +25,9 @@ type SplitResult = {
     totalChunks: number;
 };
 
-/** Options for `split` function. */
+/** Options for the `split` function. */
 type SplitOptions = _SplitOptions & {
-    /** Custom logic for `split` function. */
+    /** Custom logic for the `split` function. */
     splitFunction?: (
         options: SplitFunctionOptions,
     ) => SplitResult | Promise<SplitResult>;
@@ -37,7 +37,8 @@ const ermsg: string =
     "file is not a File, Blob, file URI, Uint8Array or Base64 data";
 
 /**
- * Split files into chunks, and the chunks can be used to check and merge later.
+ * This function splits file into chunks,
+ * and the chunks can be used to check and merge later.
  * It will return the `chunks`, `fileSize` and `totalChunks`.
  *
  * ## Example
