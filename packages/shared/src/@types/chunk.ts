@@ -1,11 +1,11 @@
 /**
- * Chunk contains the blob data of a file,
+ * FileChunk contains the blob data from the file splitted,
  * and the index of the blob data.
  */
 type FileChunk = {
-    /** Index of chunk. */
+    /** Index of the current blob data. */
     index: number;
-    /** Blob data of chunk. */
+    /** Blob data from the file splitted. */
     blob: Blob;
 };
 

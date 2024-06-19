@@ -7,7 +7,7 @@ type _MergeOptions = {
     chunks: FileChunk[];
 };
 
-/** Options for the custom logic in the `merge` function. */
+/** Options for the custom merge function in the `merge` function. */
 type MergeFunctionOptions = _MergeOptions;
 
 /** Result of the `merge` function. */
@@ -20,7 +20,7 @@ type MergeResult = {
 
 /** Options for the `merge` function. */
 type MergeOptions = _MergeOptions & {
-    /** Custom logic for the `merge` function. */
+    /** Custom merge function for the `merge` function. */
     mergeFunction?: (
         options: MergeFunctionOptions,
     ) => MergeResult | Promise<MergeResult>;

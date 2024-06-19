@@ -12,7 +12,7 @@ type _SplitOptions = {
     chunkSize: number;
 };
 
-/** Options for the custom logic in the `split` function. */
+/** Options for the custom split function in the `split` function. */
 type SplitFunctionOptions = _SplitOptions;
 
 /** Result of the `split` function. */
@@ -27,7 +27,7 @@ type SplitResult = {
 
 /** Options for the `split` function. */
 type SplitOptions = _SplitOptions & {
-    /** Custom logic for the `split` function. */
+    /** Custom split function for the `split` function. */
     splitFunction?: (
         options: SplitFunctionOptions,
     ) => SplitResult | Promise<SplitResult>;

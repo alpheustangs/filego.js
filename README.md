@@ -79,7 +79,7 @@ await split({
 
 #### `check`
 
-This function checks file integrity by verifying the the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. It will return the `status` and the `error` of the check.
+This function checks file integrity by verifying the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
 ```typescript
 import { check } from "@filego/node";
