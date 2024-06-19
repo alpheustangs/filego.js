@@ -1,4 +1,4 @@
-import type { Chunk, SplitResult } from "@filego/ts";
+import type { FileChunk, SplitResult } from "@filego/ts";
 
 import * as React from "react";
 
@@ -47,7 +47,7 @@ const App = (): React.JSX.Element => {
 
             let fileSize: number = 0;
             let totalChunks: number = 0;
-            let chunks: Chunk[] = [];
+            let chunks: FileChunk[] = [];
 
             // to perform upload request
             const uploadRequest = async (index: number): Promise<void> => {

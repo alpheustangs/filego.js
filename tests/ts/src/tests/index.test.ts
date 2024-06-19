@@ -1,4 +1,4 @@
-import type { CheckResult, Chunk, MergeResult, SplitResult } from "@filego/ts";
+import type { CheckResult, FileChunk, MergeResult, SplitResult } from "@filego/ts";
 
 import * as fse from "fs-extra";
 
@@ -21,7 +21,7 @@ describe("tests for split, check and merge", (): void => {
 
         let fileSize: number = 0;
         let totalChunks: number = 0;
-        let chunks: Chunk[] = [];
+        let chunks: FileChunk[] = [];
 
         it("should be able to split base64 data", async (): Promise<void> => {
             const fileData: string = await blobToBase64(

@@ -1,3 +1,11 @@
+## 0.3.0 (2024-06-19)
+
+### Breaking Changes
+
+- Rename `Chunk` to `FileChunk`
+- Rename `isTypeOfChunk` to `isTypeOfFileChunks`
+- Rename `sortChunks` to `sortFileChunks`
+
 ## 0.2.0 (2024-05-22)
 
 ### Breaking Changes

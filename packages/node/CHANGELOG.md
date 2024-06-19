@@ -1,3 +1,9 @@
+## 0.3.0 (2024-06-19)
+
+### What's New
+
+- Add inline documentation for types and functions
+
 ## 0.2.0 (2024-05-22)
 
 ### Breaking Changes

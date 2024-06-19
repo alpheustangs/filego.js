@@ -54,12 +54,16 @@ const checkFile = async (
             inDir: path.join(cacheRoot, id),
         });
 
-        if (result.status === "error") {
+        if (result.success === false) {
             return reply.code(400).send({
                 status: "error",
                 message: result.error,
                 data: {
-                    missing: result.missing,
+                    ...(result.error.type === "missing"
+                        ? {
+                              missing: result.error.missing,
+                          }
+                        : {}),
                 },
             });
         }

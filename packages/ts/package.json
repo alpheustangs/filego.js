@@ -1,6 +1,6 @@
 {
     "name": "@filego/ts",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "A solution for splitting, checking and merging files",
     "keywords": [
         "FileGo",
@@ -37,6 +37,6 @@
         "directory": "packages/ts"
     },
     "dependencies": {
-        "@filego/shared": "workspace:^"
+        "@filego/shared": "workspace:~"
     }
 }
