@@ -7,12 +7,12 @@ type _CheckOptions = {
     chunks: FileChunk[];
     /**
      * Size of the original file,
-     * which can be found as the output of `split` function.
+     * which can be found as the output of the `split` function.
      */
     fileSize: number;
     /**
      * Total number of chunks in the original file,
-     * which can be found as the output of `split` function.
+     * which can be found as the output of the `split` function.
      */
     totalChunks: number;
 };

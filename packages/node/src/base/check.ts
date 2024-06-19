@@ -5,12 +5,12 @@ type _CheckOptions = {
     inDir: string;
     /**
      * Size of the original file,
-     * which can be found as an output of `split` function.
+     * which can be found as an output of the `split` function.
      */
     fileSize: number;
     /**
      * Total number of chunks in the original file,
-     * which can be found as an output of `split` function.
+     * which can be found as an output of the `split` function.
      */
     totalChunks: number;
 };

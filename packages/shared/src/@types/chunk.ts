@@ -1,4 +1,4 @@
-/** 
+/**
  * Chunk contains the blob data of a file,
  * and the index of the blob data.
  */
