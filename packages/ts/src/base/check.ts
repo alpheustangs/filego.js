@@ -35,7 +35,6 @@ type CheckOptions = _CheckOptions & {
  * ## Example
  *
  * ```typescript
- * import type { Chunk } from "@filego/ts";
  * import { check } from "@filego/ts";
  *
  * await check({

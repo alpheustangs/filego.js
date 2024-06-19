@@ -7,10 +7,10 @@ import type { FileChunk } from "#/@types/chunk";
  *
  * ```typescript
  * import type { FileChunk } from "@filego/shared";
- * import { isTypeOfChunks } from "@filego/shared";
+ * import { isTypeOfFileChunks } from "@filego/shared";
  *
- * const chunks: FileChunk[] = // ...
- * const result: boolean = isTypeOfChunks(chunks);
+ * const chunks: FileChunk[] = []; // file chunks...
+ * const result: boolean = isTypeOfFileChunks(chunks);
  * ```
  */
 const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
@@ -37,10 +37,10 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
  *
  * ```typescript
  * import type { Chunk } from "@filego/shared";
- * import { sortChunks } from "@filego/shared";
+ * import { sortFileChunks } from "@filego/shared";
  *
- * const chunks: FileChunk[] = // ...
- * const sorted: FileChunk[] = sortChunks(chunks);
+ * const chunks: FileChunk[] = []; // file chunks...
+ * const sorted: FileChunk[] = sortFileChunks(chunks);
  * ```
  */
 const sortFileChunks = (array: FileChunk[]): FileChunk[] => {
