@@ -17,6 +17,6 @@
         "@types/fs-extra": "^11.0.4",
         "@types/node": "^20.14.6",
         "stormode": "^0.6.1",
-        "typescript": "^5.4.5"
+        "typescript": "^5.5.2"
     }
 }
