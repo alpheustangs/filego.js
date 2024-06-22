@@ -1,6 +1,6 @@
 ## 0.3.1 (2024-06-22)
 
-### What's changes
+### What's Changed
 
 - Update `package.json`
 - Update dependencies
