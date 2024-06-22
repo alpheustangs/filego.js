@@ -2,24 +2,18 @@
 
 A solution for splitting, checking and merging files.
 
-## Install
+## Quick Start
 
-npm:
+Split file from a path to a directory directly with `split` function.
 
-```bash
-npm i @filego/node
-```
+```typescript
+import { split } from "@filego/node";
 
-yarn:
-
-```bash
-yarn add @filego/node
-```
-
-pnpm:
-
-```bash
-pnpm add @filego/node
+await split({
+    inFile: "/path/to/file.txt",
+    outDir: "/path/to/dir",
+    chunkSize: 2 * 1024 * 1024,
+});
 ```
 
 ## License

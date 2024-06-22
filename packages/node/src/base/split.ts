@@ -40,7 +40,7 @@ type SplitOptions = _SplitOptions & {
  * await split({
  *     inFile: "/path/to/file.txt",
  *     outDir: "/path/to/dir",
- *     chunkSize: 1 * 1024 * 1024,
+ *     chunkSize: 2 * 1024 * 1024,
  * });
  * ```
  */

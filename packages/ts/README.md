@@ -2,24 +2,19 @@
 
 A solution for splitting, checking and merging files.
 
-## Install
+## Quick Start
 
-npm:
+Split file from a path with `split` function.
 
-```bash
-npm i @filego/ts
-```
+```typescript
+import { split } from "@filego/ts";
 
-yarn:
+const file: File | Blob | Uint8Array | string = "";
 
-```bash
-yarn add @filego/ts
-```
-
-pnpm:
-
-```bash
-pnpm add @filego/ts
+await split({
+    file,
+    chunkSize: 2 * 1024 * 1024,
+});
 ```
 
 ## License

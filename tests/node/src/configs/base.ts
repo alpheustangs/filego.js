@@ -19,6 +19,6 @@ const inFiles: string[] = getInputs({
 
 // config
 
-const chunkSize: number = 2 * 1024 * 1024;
+const chunkSize: number = 1 * 1024 * 1024;
 
 export { inRoot, cacheRoot, outRoot, fileNames, inFiles, chunkSize };

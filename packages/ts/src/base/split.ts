@@ -46,11 +46,11 @@ const ermsg: string =
  * ```typescript
  * import { split } from "@filego/ts";
  *
- * const file: File | Blob | Uint8Array | string = // ...
+ * const file: File | Blob | Uint8Array | string = "";
  *
  * await split({
  *     file,
- *     chunkSize: 1 * 1024 * 1024, // 1MB
+ *     chunkSize: 2 * 1024 * 1024,
  * });
  * ```
  */

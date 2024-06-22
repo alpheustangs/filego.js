@@ -136,7 +136,7 @@ const App = (): React.JSX.Element => {
             // split
             const splitted: SplitResult = await split({
                 file,
-                chunkSize: 1 * 1024 * 1024,
+                chunkSize: 2 * 1024 * 1024,
             });
 
             fileSize = splitted.fileSize;
