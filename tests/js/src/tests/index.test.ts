@@ -3,11 +3,11 @@ import type {
     FileChunk,
     MergeResult,
     SplitResult,
-} from "@filego/ts";
+} from "@filego/js";
 
 import * as fse from "fs-extra";
 
-import { check, merge, split } from "@filego/ts";
+import { check, merge, split } from "@filego/js";
 
 import { describe, expect, it } from "vitest";
 
@@ -67,7 +67,7 @@ describe("tests for split, check and merge", (): void => {
                 chunkSize,
             });
 
-            getMemUsage({ name: "@filego/ts split" });
+            getMemUsage({ name: "@filego/js split" });
 
             expect(true).toBe(typeof result.fileSize === "number");
             expect(true).toBe(typeof result.totalChunks === "number");
@@ -106,7 +106,7 @@ describe("tests for split, check and merge", (): void => {
                 chunks,
             });
 
-            getMemUsage({ name: "@filego/ts check" });
+            getMemUsage({ name: "@filego/js check" });
 
             expect(result.success).toBe(true);
         });
@@ -116,7 +116,7 @@ describe("tests for split, check and merge", (): void => {
                 chunks,
             });
 
-            getMemUsage({ name: "@filego/ts merge" });
+            getMemUsage({ name: "@filego/js merge" });
 
             expect(result.blob.size).toBe(fileSize);
         });

@@ -24,8 +24,8 @@
         "js",
         "JavaScript"
     ],
-    "homepage": "https://github.com/alpheustangs/filego.ts",
-    "bugs": "https://github.com/alpheustangs/filego.ts/issues",
+    "homepage": "https://github.com/alpheustangs/filego.js",
+    "bugs": "https://github.com/alpheustangs/filego.js/issues",
     "license": "MIT",
     "author": "Alpheus Tang",
     "files": ["dist"],
@@ -33,7 +33,7 @@
     "types": "./dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alpheustangs/filego.ts.git",
+        "url": "https://github.com/alpheustangs/filego.js.git",
         "directory": "packages/node"
     },
     "dependencies": {

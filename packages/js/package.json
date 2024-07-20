@@ -1,5 +1,5 @@
 {
-    "name": "@filego/ts",
+    "name": "@filego/js",
     "version": "0.3.1",
     "description": "A file splitting & merging solution",
     "keywords": [
@@ -24,8 +24,8 @@
         "js",
         "JavaScript"
     ],
-    "homepage": "https://github.com/alpheustangs/filego.ts",
-    "bugs": "https://github.com/alpheustangs/filego.ts/issues",
+    "homepage": "https://github.com/alpheustangs/filego.js",
+    "bugs": "https://github.com/alpheustangs/filego.js/issues",
     "license": "MIT",
     "author": "Alpheus Tang",
     "files": ["dist"],
@@ -33,8 +33,8 @@
     "types": "./dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alpheustangs/filego.ts.git",
-        "directory": "packages/ts"
+        "url": "https://github.com/alpheustangs/filego.js.git",
+        "directory": "packages/js"
     },
     "dependencies": {
         "@filego/shared": "workspace:~"

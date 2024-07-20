@@ -5,7 +5,7 @@
         "test": "vitest run"
     },
     "dependencies": {
-        "@filego/ts": "workspace:^",
+        "@filego/js": "workspace:^",
         "@test/shared": "workspace:^",
         "fs-extra": "^11.2.0"
     },

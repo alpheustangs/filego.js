@@ -33,7 +33,7 @@ type MergeOptions = _MergeOptions & {
  * ## Example
  *
  * ```typescript
- * import { merge } from "@filego/ts";
+ * import { merge } from "@filego/js";
  *
  * await merge({
  *     chunks: [], // result from split function...

@@ -2,14 +2,14 @@
     "private": true,
     "scripts": {
         "format": "biome check --write .",
-        "build": "npm-run-all --sequential build:shared build:node build:ts",
+        "build": "npm-run-all --sequential build:shared build:node build:js",
         "build:shared": "cd ./packages/shared && tsc && tsc-alias",
         "build:node": "cd ./packages/node && tsc && tsc-alias",
-        "build:ts": "cd ./packages/ts && tsc && tsc-alias",
-        "test": "npm-run-all --sequential test:shared test:node test:ts",
+        "build:js": "cd ./packages/js && tsc && tsc-alias",
+        "test": "npm-run-all --sequential test:shared test:node test:js",
         "test:shared": "cd ./tests/shared && pnpm run build",
         "test:node": "cd ./tests/node && pnpm run test",
-        "test:ts": "cd ./tests/ts && pnpm run test",
+        "test:js": "cd ./tests/js && pnpm run test",
         "node": "cd ./examples/node && pnpm run dev",
         "web": "cd ./examples/web && pnpm run dev",
         "": ""

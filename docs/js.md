@@ -1,32 +1,32 @@
-# Usage of `@filego/ts`
+# Usage of `@filego/js`
 
-This documentation provides the usage of `@filego/ts`.
+This documentation provides the usage of `@filego/js`.
 
 ## Installation
 
-Install `@filego/ts` as a dependency:
+Install `@filego/js` as a dependency:
 
 ```bash
 # NPM
-npm install @filego/ts
+npm install @filego/js
 
 # Yarn
-yarn add @filego/ts
+yarn add @filego/js
 
 # PNPM
-pnpm add @filego/ts
+pnpm add @filego/js
 ```
 
 ## Functions
 
-`@filego/ts` provides the following functions:
+`@filego/js` provides the following functions:
 
 #### `split`
 
 This function splits file into chunks, and the chunks can be used to check and merge later. It will return the `chunks`, `fileSize` and `totalChunks`.
 
 ```typescript
-import { split } from "@filego/ts";
+import { split } from "@filego/js";
 
 const file: File | Blob | Uint8Array | string = "";
 
@@ -41,7 +41,7 @@ await split({
 This function checks file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
 ```typescript
-import { check } from "@filego/ts";
+import { check } from "@filego/js";
 
 await check({
     chunks: [], // result from split function...
@@ -55,7 +55,7 @@ await check({
 This function merges the chunks by using the `chunks` parameters. It will return the `blob` and `buffer` of the merged file.
 
 ```typescript
-import { merge } from "@filego/ts";
+import { merge } from "@filego/js";
 
 await merge({
     chunks: [], // result from split function...

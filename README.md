@@ -8,13 +8,13 @@ For TypeScript / JavaScript environment:
 
 ```bash
 # NPM
-npm install @filego/ts
+npm install @filego/js
 
 # Yarn
-yarn add @filego/ts
+yarn add @filego/js
 
 # PNPM
-pnpm add @filego/ts
+pnpm add @filego/js
 ```
 
 For Node environment:
@@ -44,7 +44,7 @@ await split({
 });
 ```
 
-For the usage of `@filego/ts`, please refer to [docs/ts.md](./docs/ts.md).
+For the usage of `@filego/js`, please refer to [docs/js.md](./docs/js.md).
 
 For the usage of `@filego/node`, please refer to [docs/node.md](./docs/node.md).
 

@@ -35,7 +35,7 @@ type CheckOptions = _CheckOptions & {
  * ## Example
  *
  * ```typescript
- * import { check } from "@filego/ts";
+ * import { check } from "@filego/js";
  *
  * await check({
  *     chunks: [], // result from split function...

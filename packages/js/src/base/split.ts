@@ -44,7 +44,7 @@ const ermsg: string =
  * ## Example
  *
  * ```typescript
- * import { split } from "@filego/ts";
+ * import { split } from "@filego/js";
  *
  * const file: File | Blob | Uint8Array | string = "";
  *

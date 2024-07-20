@@ -1,8 +1,8 @@
-import type { FileChunk, SplitResult } from "@filego/ts";
+import type { FileChunk, SplitResult } from "@filego/js";
 
 import * as React from "react";
 
-import { split } from "@filego/ts";
+import { split } from "@filego/js";
 
 type APIResponse<Data> = {
     status: "success" | "error";

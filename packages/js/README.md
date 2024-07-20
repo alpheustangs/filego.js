@@ -7,7 +7,7 @@ A file splitting & merging solution.
 Split file from a path with `split` function.
 
 ```typescript
-import { split } from "@filego/ts";
+import { split } from "@filego/js";
 
 const file: File | Blob | Uint8Array | string = "";
 
