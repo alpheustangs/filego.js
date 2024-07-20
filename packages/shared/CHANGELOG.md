@@ -1,3 +1,9 @@
+## 0.3.2 (2024-07-20)
+
+### What's Changed
+
+- Update description
+
 ## 0.3.1 (2024-06-22)
 
 ### What's Changed

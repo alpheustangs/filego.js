@@ -1,3 +1,12 @@
+## 0.3.2 (2024-07-20)
+
+> Package renamed from `@filego/ts` to `@filego/js`
+
+### What's Changed
+
+- Update description
+- Update dependencies
+
 ## 0.3.1 (2024-06-22)
 
 ### What's Changed

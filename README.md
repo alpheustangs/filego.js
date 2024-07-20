@@ -4,7 +4,7 @@ A file splitting & merging solution.
 
 ## Installation
 
-For TypeScript / JavaScript environment:
+For JavaScript/TypeScript environment:
 
 ```bash
 # NPM
