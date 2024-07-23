@@ -5,17 +5,14 @@ import type {
 
 import * as path from "node:path";
 
-import * as fse from "fs-extra";
-
 import {
     check as nodeCheck,
     merge as nodeMerge,
     split as nodeSplit,
 } from "@filego/node";
-
-import { describe, expect, it } from "vitest";
-
 import { getMemUsage } from "@test/shared";
+import * as fse from "fs-extra";
+import { describe, expect, it } from "vitest";
 
 import {
     cacheRoot,

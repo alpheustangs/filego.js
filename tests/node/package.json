@@ -2,16 +2,17 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "test": "vitest run"
+        "test": "vitest run",
+        "": ""
     },
     "dependencies": {
         "@filego/node": "workspace:^",
         "@test/shared": "workspace:^",
-        "fs-extra": "^11.2.0"
+        "fs-extra": "^11.2.0",
+        "vitest": "^2.0.4"
     },
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
-        "vite": "^5.3.4",
-        "vitest": "^2.0.4"
+        "vite": "^5.3.4"
     }
 }
