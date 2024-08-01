@@ -9,7 +9,7 @@
         "@filego/node": "workspace:^",
         "@test/shared": "workspace:^",
         "fs-extra": "^11.2.0",
-        "vitest": "^2.0.4"
+        "vitest": "^2.0.5"
     },
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
