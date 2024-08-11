@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-        "target": "ES5",
-        "module": "CommonJS",
         "moduleResolution": "Node10",
         "resolveJsonModule": true,
-        "declaration": true,
+        "declaration": false,
+        "removeComments": true,
         "downlevelIteration": true,
         "isolatedModules": true,
         "esModuleInterop": true,

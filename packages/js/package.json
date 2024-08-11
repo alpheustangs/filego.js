@@ -29,8 +29,9 @@
     "license": "MIT",
     "author": "Alpheus Tang",
     "files": ["dist"],
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/alpheustangs/filego.js.git",

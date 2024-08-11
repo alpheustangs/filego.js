@@ -72,7 +72,7 @@
     },
     "overrides": [
         {
-            "include": ["./**/tsconfig.base.json", "./**/tsconfig.json"],
+            "include": ["./**/tsconfig.*.json", "./**/tsconfig.json"],
             "json": {
                 "parser": {
                     "allowComments": true,
