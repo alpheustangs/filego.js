@@ -46,15 +46,23 @@ const merge = async (options: MergeOptions): Promise<void> => {
         throw new TypeError("mergeFunction is not a function");
     }
 
-    // custom merge function
+    // custom
 
     if (mergeFunction) return await mergeFunction({ inDir, outFile });
 
-    // merge function
+    // default
 
-    const fs = await import("node:fs");
-    const fsp = await import("node:fs/promises");
-    const path = await import("node:path");
+    let fs: typeof import("node:fs");
+    let fsp: typeof import("node:fs/promises");
+    let path: typeof import("node:path");
+
+    try {
+        fs = await import("node:fs");
+        fsp = await import("node:fs/promises");
+        path = await import("node:path");
+    } catch (e: unknown) {
+        throw new Error("Node.js is required to use the merge function");
+    }
 
     // check if the input directory exists
     if (!fs.existsSync(inDir)) {

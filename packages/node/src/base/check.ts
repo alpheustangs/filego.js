@@ -63,7 +63,8 @@ const check = async (options: CheckOptions): Promise<CheckResult> => {
         throw new TypeError("checkFunction is not a function");
     }
 
-    // custom check function
+    // custom
+
     if (checkFunction) {
         return await checkFunction({
             fileSize,
@@ -73,9 +74,18 @@ const check = async (options: CheckOptions): Promise<CheckResult> => {
     }
 
     // default
-    const fs = await import("node:fs");
-    const fsp = await import("node:fs/promises");
-    const path = await import("node:path");
+
+    let fs: typeof import("node:fs");
+    let fsp: typeof import("node:fs/promises");
+    let path: typeof import("node:path");
+
+    try {
+        fs = await import("node:fs");
+        fsp = await import("node:fs/promises");
+        path = await import("node:path");
+    } catch (e: unknown) {
+        throw new Error("Node.js is required to use the check function");
+    }
 
     if (!fs.existsSync(inDir)) {
         throw new Error("Input directory not found");

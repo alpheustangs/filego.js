@@ -63,16 +63,24 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
         throw new TypeError("splitFunction is not a function");
     }
 
-    // custom split function
+    // custom
 
     if (splitFunction)
         return await splitFunction({ inFile, outDir, chunkSize });
 
-    // split tunnel
+    // default
 
-    const fs = await import("node:fs");
-    const fsp = await import("node:fs/promises");
-    const path = await import("node:path");
+    let fs: typeof import("node:fs");
+    let fsp: typeof import("node:fs/promises");
+    let path: typeof import("node:path");
+
+    try {
+        fs = await import("node:fs");
+        fsp = await import("node:fs/promises");
+        path = await import("node:path");
+    } catch (e: unknown) {
+        throw new Error("Node.js is required to use the split function");
+    }
 
     if (!fs.existsSync(inFile)) {
         throw new Error("Input path not found");
