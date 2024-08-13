@@ -2,8 +2,6 @@
     "compilerOptions": {
         "moduleResolution": "Node10",
         "resolveJsonModule": true,
-        "declaration": false,
-        "removeComments": true,
         "downlevelIteration": true,
         "isolatedModules": true,
         "esModuleInterop": true,

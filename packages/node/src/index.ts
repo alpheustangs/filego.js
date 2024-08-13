@@ -1,19 +1,37 @@
-// split
+import type {
+    CheckFunctionOptions,
+    CheckOptions,
+    CheckResult,
+} from "#/base/check";
+import type { MergeFunctionOptions, MergeOptions } from "#/base/merge";
+import type {
+    SplitFunctionOptions,
+    SplitOptions,
+    SplitResult,
+} from "#/base/split";
+
+import { check } from "#/base/check";
+import { merge } from "#/base/merge";
+import { split } from "#/base/split";
+
+const filego = {
+    split,
+    check,
+    merge,
+};
+
+export default filego;
 export type {
+    // split
     SplitOptions,
     SplitFunctionOptions,
     SplitResult,
-} from "#/base/split";
-export { split } from "#/base/split";
-
-// check
-export type {
+    // check
     CheckOptions,
     CheckFunctionOptions,
     CheckResult,
-} from "#/base/check";
-export { check } from "#/base/check";
-
-// merge
-export type { MergeOptions, MergeFunctionOptions } from "#/base/merge";
-export { merge } from "#/base/merge";
+    // merge
+    MergeOptions,
+    MergeFunctionOptions,
+};
+export { split, check, merge };

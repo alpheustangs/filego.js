@@ -1,26 +1,44 @@
-// chunk
-export type { FileChunk } from "@filego/shared";
+import type { FileChunk } from "@filego/shared";
+import type {
+    CheckFunctionOptions,
+    CheckOptions,
+    CheckResult,
+} from "#/base/check";
+import type {
+    MergeFunctionOptions,
+    MergeOptions,
+    MergeResult,
+} from "#/base/merge";
+import type {
+    SplitFunctionOptions,
+    SplitOptions,
+    SplitResult,
+} from "#/base/split";
 
-// split
+import { check } from "#/base/check";
+import { merge } from "#/base/merge";
+import { split } from "#/base/split";
+
+const filego = {
+    split,
+    check,
+    merge,
+};
+
+export default filego;
 export type {
+    FileChunk,
+    // split
     SplitOptions,
     SplitFunctionOptions,
     SplitResult,
-} from "#/base/split";
-export { split } from "#/base/split";
-
-// check
-export type {
+    // check
     CheckOptions,
     CheckFunctionOptions,
     CheckResult,
-} from "#/base/check";
-export { check } from "#/base/check";
-
-// merge
-export type {
+    // merge
     MergeOptions,
     MergeFunctionOptions,
     MergeResult,
-} from "#/base/merge";
-export { merge } from "#/base/merge";
+};
+export { split, check, merge };
