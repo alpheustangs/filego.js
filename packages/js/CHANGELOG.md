@@ -1,3 +1,13 @@
+## 0.4.0 (2024-08-13)
+
+### What's New
+
+- Add support for ES Module
+
+### What's Changed
+
+- Update dependencies
+
 ## 0.3.2 (2024-07-20)
 
 > Package renamed from `@filego/ts` to `@filego/js`
