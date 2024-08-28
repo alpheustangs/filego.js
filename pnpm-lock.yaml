@@ -113,14 +113,14 @@ importers:
         version: 11.2.0
       vitest:
         specifier: ^2.0.5
-        version: 2.0.5(@types/node@22.5.1)(jsdom@24.1.1)
+        version: 2.0.5(@types/node@22.5.1)(jsdom@25.0.0)
     devDependencies:
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
       jsdom:
-        specifier: ^24.1.1
-        version: 24.1.1
+        specifier: ^25.0.0
+        version: 25.0.0
       vite:
         specifier: ^5.4.2
         version: 5.4.2(@types/node@22.5.1)
@@ -138,7 +138,7 @@ importers:
         version: 11.2.0
       vitest:
         specifier: ^2.0.5
-        version: 2.0.5(@types/node@22.5.1)(jsdom@24.1.1)
+        version: 2.0.5(@types/node@22.5.1)(jsdom@25.0.0)
     devDependencies:
       '@types/fs-extra':
         specifier: ^11.0.4
@@ -1375,8 +1375,8 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  jsdom@24.1.1:
-    resolution: {integrity: sha512-5O1wWV99Jhq4DV7rCLIoZ/UIhyQeDR7wHVyZAHAshbrvZsLs+Xzz7gtwnlJTJDjleiTKh54F4dXrX70vJQTyJQ==}
+  jsdom@25.0.0:
+    resolution: {integrity: sha512-OhoFVT59T7aEq75TVw9xxEfkXgacpqAhQaYgP9y/fDqWQCMB/b1H66RfmPm/MaeaAIU9nDwMOVTlPN51+ao6CQ==}
     engines: {node: '>=18'}
     peerDependencies:
       canvas: ^2.11.2
@@ -3345,7 +3345,7 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  jsdom@24.1.1:
+  jsdom@25.0.0:
     dependencies:
       cssstyle: 4.0.1
       data-urls: 5.0.0
@@ -4077,7 +4077,7 @@ snapshots:
       '@types/node': 22.5.1
       fsevents: 2.3.3
 
-  vitest@2.0.5(@types/node@22.5.1)(jsdom@24.1.1):
+  vitest@2.0.5(@types/node@22.5.1)(jsdom@25.0.0):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -4100,7 +4100,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.5.1
-      jsdom: 24.1.1
+      jsdom: 25.0.0
     transitivePeerDependencies:
       - less
       - lightningcss
