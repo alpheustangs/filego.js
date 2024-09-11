@@ -52,7 +52,7 @@ await check({
 
 #### `merge`
  
-This function merges the chunks by using the `chunks` parameters. It will return the `blob` and `buffer` of the merged file.
+This function merges the chunks by using the `chunks` parameters. It will return the `blob` of the merged file.
 
 ```typescript
 import { merge } from "@filego/js";

@@ -14,8 +14,6 @@ type MergeFunctionOptions = _MergeOptions;
 type MergeResult = {
     /** merged blob */
     blob: Blob;
-    /** merged buffer */
-    buffer: Buffer;
 };
 
 /** Options for the `merge` function. */
@@ -28,7 +26,7 @@ type MergeOptions = _MergeOptions & {
 
 /**
  * This function merges the chunks by using the `chunks` parameters.
- * It will return the `blob` and `buffer` of the merged file.
+ * It will return the `blob` of the merged file.
  *
  * ## Example
  *
@@ -61,19 +59,8 @@ const merge = async (options: MergeOptions): Promise<MergeResult> => {
         sortFileChunks(chunks).map((chunk: FileChunk): Blob => chunk.blob),
     );
 
-    let buffer: Buffer;
-
-    if (typeof blob.arrayBuffer === "function") {
-        buffer = Buffer.from(await blob.arrayBuffer());
-    }
-    // fallback
-    else {
-        buffer = Buffer.from(await new Response(blob).arrayBuffer());
-    }
-
     return {
         blob,
-        buffer,
     };
 };
 
