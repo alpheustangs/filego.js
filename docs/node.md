@@ -23,7 +23,8 @@ pnpm add @filego/node
 
 #### `split`
 
-This function splits file from a path to a directory directly. It will only return the `fileSize` and the `totalChunks` of the file.
+This function splits file from a path to a directory directly. 
+It will only return the `fileSize` and the `totalChunks` of the file.
 
 ```typescript
 import { split } from "@filego/node";
@@ -37,7 +38,9 @@ await split({
 
 #### `check`
 
-This function checks file integrity by verifying the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. It will return the `status` and the `error` of the check.
+This function checks file integrity by verifying 
+the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. 
+It will return the `status` and the `error` of the check.
 
 ```typescript
 import { check } from "@filego/node";
@@ -51,7 +54,8 @@ await check({
 
 #### `merge`
 
-This function merges the chunks from a directory to a specified path directly. Therefore, nothing will be returned as a result.
+This function merges the chunks from a directory to a specified path directly. 
+Therefore, nothing will be returned as a result.
 
 ```typescript
 import { merge } from "@filego/node";
