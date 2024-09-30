@@ -23,9 +23,7 @@ pnpm add @filego/js
 
 #### `split`
 
-This function splits file into chunks, 
-and the chunks can be used to check and merge later. 
-It will return the `chunks`, `fileSize` and `totalChunks`.
+This function splits file into chunks, and the chunks can be used to check and merge later. It will return the `chunks`, `fileSize` and `totalChunks`.
 
 ```typescript
 import { split } from "@filego/js";
@@ -40,9 +38,7 @@ await split({
 
 #### `check`
 
-This function checks file integrity by verifying 
-the `chunks` with `fileSize` and `totalChunks` parameters. 
-It will return the `status` and the `error` of the check.
+This function checks file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
 ```typescript
 import { check } from "@filego/js";
@@ -56,8 +52,7 @@ await check({
 
 #### `merge`
  
-This function merges the chunks by using the `chunks` parameters. 
-It will return the `blob` of the merged file.
+This function merges the chunks by using the `chunks` parameters. It will return the `blob` of the merged file.
 
 ```typescript
 import { merge } from "@filego/js";
