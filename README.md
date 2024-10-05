@@ -6,27 +6,41 @@ A file splitting & merging solution.
 
 For JavaScript/TypeScript environment:
 
+npm:
+
 ```bash
-# NPM
-npm install @filego/js
+npm i @filego/js
+```
 
-# Yarn
+Yarn:
+
+```bash
 yarn add @filego/js
+```
 
-# PNPM
+pnpm:
+
+```bash
 pnpm add @filego/js
 ```
 
 For Node environment:
 
+npm:
+
 ```bash
-# NPM
-npm install @filego/node
+npm i @filego/node
+```
 
-# Yarn
+Yarn:
+
+```bash
 yarn add @filego/node
+```
 
-# PNPM
+pnpm:
+
+```bash
 pnpm add @filego/node
 ```
 

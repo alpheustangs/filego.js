@@ -6,14 +6,21 @@ This documentation provides the usage of `@filego/node`.
 
 Install `@filego/node` as a dependency:
 
+npm:
+
 ```bash
-# NPM
-npm install @filego/node
+npm i @filego/node
+```
 
-# Yarn
+Yarn:
+
+```bash
 yarn add @filego/node
+```
 
-# PNPM
+pnpm:
+
+```bash
 pnpm add @filego/node
 ```
 

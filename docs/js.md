@@ -6,14 +6,21 @@ This documentation provides the usage of `@filego/js`.
 
 Install `@filego/js` as a dependency:
 
+npm:
+
 ```bash
-# NPM
-npm install @filego/js
+npm i @filego/js
+```
 
-# Yarn
+Yarn:
+
+```bash
 yarn add @filego/js
+```
 
-# PNPM
+pnpm:
+
+```bash
 pnpm add @filego/js
 ```
 
