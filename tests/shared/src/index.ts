@@ -1,2 +1,2 @@
-export * from "./functions/getInputs";
 export * from "./functions/getMemUsage";
+export * from "./functions/searchFiles";

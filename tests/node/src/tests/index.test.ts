@@ -14,21 +14,15 @@ import { getMemUsage } from "@test/shared";
 import * as fse from "fs-extra";
 import { describe, expect, it } from "vitest";
 
-import {
-    cacheRoot,
-    chunkSize,
-    fileNames,
-    inFiles,
-    outRoot,
-} from "../configs/base";
+import { cacheRoot, chunkSize, inFiles, outRoot } from "../configs/base";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {
-        const file: string = fileNames[i];
+        const inFile: string = inFiles[i];
+        const file: string = inFile.split("/").pop() ?? "";
         const fileName: string = file.split(".")[0];
         const fileExt: string = file.split(".").pop() ?? "";
 
-        const inFile: string = inFiles[i];
         const cacheDir: string = path.resolve(cacheRoot, fileName);
         const outFile: string = path.resolve(
             outRoot,

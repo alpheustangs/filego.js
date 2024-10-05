@@ -10,15 +10,14 @@ import { getMemUsage } from "@test/shared";
 import * as fse from "fs-extra";
 import { describe, expect, it } from "vitest";
 
-import { chunkSize, fileNames, inFiles } from "../configs/base";
+import { chunkSize, inFiles } from "../configs/base";
 import { blobToBase64 } from "../functions/blobToBase64";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {
-        const file: string = fileNames[i];
-        const fileName: string = file.split(".")[0];
-
         const inFile: string = inFiles[i];
+        const file: string = inFile.split("/").pop() ?? "";
+        const fileName: string = file.split(".")[0];
 
         let fileSize: number = 0;
         let totalChunks: number = 0;

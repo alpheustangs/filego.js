@@ -29,7 +29,8 @@ type CheckOptions = _CheckOptions & {
 };
 
 /**
- * This function checks file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters.
+ * This function checks file integrity by verifying
+ * the `chunks` with `fileSize` and `totalChunks` parameters.
  * It will return the `status` and the `error` of the check.
  *
  * ## Example

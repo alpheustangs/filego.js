@@ -162,8 +162,9 @@ const App = (): React.JSX.Element => {
 
     return (
         <>
-            <label>{"ID: "}</label>
+            <label htmlFor="id">{"ID: "}</label>
             <input
+                id="id"
                 type="text"
                 title="ID"
                 value={id}

@@ -4,7 +4,6 @@ __MACOSX/
 
 # Builds
 dist/
-.media/
 
 # Modules
 node_modules/
