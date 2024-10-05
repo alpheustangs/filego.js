@@ -1,3 +1,15 @@
+## 0.5.0 (2024-10-05)
+
+### Breaking Changes
+
+- Remove `buffer` from `merge` result
+
+### What's Changed
+
+- Update `package.json`
+- Update dependencies
+- Update documentation
+
 ## 0.4.0 (2024-08-13)
 
 ### What's New

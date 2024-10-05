@@ -1,3 +1,9 @@
+## 0.5.0 (2024-10-05)
+
+### What's Changed
+
+- Update `package.json`
+
 ## 0.4.0 (2024-08-13)
 
 ### What's New
