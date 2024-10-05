@@ -111,7 +111,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
             current = Buffer.concat([current, Buffer.from(data)]);
 
             while (current.length >= chunkSize) {
-                const _current: Buffer = current.slice(0, chunkSize);
+                const _current: Buffer = current.subarray(0, chunkSize);
 
                 fs.writeFileSync(path.join(outDir, `${index}`), _current);
 
@@ -120,7 +120,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
                 index++;
 
                 // save exceeded buffers
-                current = current.slice(chunkSize);
+                current = current.subarray(chunkSize);
             }
         });
 
