@@ -72,4 +72,4 @@ For the example of Node in Fastify, please refer to [examples/node](./examples/n
 
 ## License
 
-This project is MIT licensed, you can find the license file [here](./LICENSE).
+This project is licensed under the terms of the MIT license.
