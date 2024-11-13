@@ -4,23 +4,16 @@ This documentation provides the usage of `@filego/node`.
 
 ## Installation
 
-Install `@filego/node` as a dependency:
+Install this package as a dependency in the project:
 
-npm:
-
-```bash
+```sh
+# npm
 npm i @filego/node
-```
 
-Yarn:
-
-```bash
+# Yarn
 yarn add @filego/node
-```
 
-pnpm:
-
-```bash
+# pnpm
 pnpm add @filego/node
 ```
 
@@ -32,7 +25,7 @@ pnpm add @filego/node
 
 This function splits file from a path to a directory directly. It will only return the `fileSize` and the `totalChunks` of the file.
 
-```typescript
+```ts
 import { split } from "@filego/node";
 
 await split({
@@ -46,7 +39,7 @@ await split({
 
 This function checks file integrity by verifying the chunks specified in the `inDir` with `fileSize`, `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
-```typescript
+```ts
 import { check } from "@filego/node";
 
 await check({
@@ -60,7 +53,7 @@ await check({
 
 This function merges the chunks from a directory to a specified path directly. Therefore, nothing will be returned as a result.
 
-```typescript
+```ts
 import { merge } from "@filego/node";
 
 await merge({

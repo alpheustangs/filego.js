@@ -6,7 +6,7 @@ A file splitting & merging solution.
 
 Split file from a path to a directory directly with `split` function.
 
-```typescript
+```ts
 import { split } from "@filego/node";
 
 await split({

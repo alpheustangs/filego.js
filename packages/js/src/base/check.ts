@@ -35,7 +35,7 @@ type CheckOptions = _CheckOptions & {
  *
  * ## Example
  *
- * ```typescript
+ * ```ts
  * import { check } from "@filego/js";
  *
  * await check({

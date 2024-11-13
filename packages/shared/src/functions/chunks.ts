@@ -5,7 +5,7 @@ import type { FileChunk } from "#/@types/chunk";
  *
  * ## Example
  *
- * ```typescript
+ * ```ts
  * import type { FileChunk } from "@filego/shared";
  * import { isTypeOfFileChunks } from "@filego/shared";
  *
@@ -35,7 +35,7 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
  *
  * ## Example
  *
- * ```typescript
+ * ```ts
  * import type { Chunk } from "@filego/shared";
  * import { sortFileChunks } from "@filego/shared";
  *

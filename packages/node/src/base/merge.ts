@@ -22,7 +22,7 @@ type MergeOptions = _MergeOptions & {
  *
  * ## Example
  *
- * ```typescript
+ * ```ts
  * import { merge } from "@filego/node";
  *
  * await merge({

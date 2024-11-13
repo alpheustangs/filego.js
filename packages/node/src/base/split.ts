@@ -34,7 +34,7 @@ type SplitOptions = _SplitOptions & {
  *
  * ## Example
  *
- * ```typescript
+ * ```ts
  * import { split } from "@filego/node";
  *
  * await split({

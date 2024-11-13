@@ -4,23 +4,16 @@ This documentation provides the usage of `@filego/js`.
 
 ## Installation
 
-Install `@filego/js` as a dependency:
+Install this package as a dependency in the project:
 
-npm:
-
-```bash
+```sh
+# npm
 npm i @filego/js
-```
 
-Yarn:
-
-```bash
+# Yarn
 yarn add @filego/js
-```
 
-pnpm:
-
-```bash
+# pnpm
 pnpm add @filego/js
 ```
 
@@ -32,7 +25,7 @@ pnpm add @filego/js
 
 This function splits file into chunks, and the chunks can be used to check and merge later. It will return the `chunks`, `fileSize` and `totalChunks`.
 
-```typescript
+```ts
 import { split } from "@filego/js";
 
 const file: File | Blob | Uint8Array | string = "";
@@ -47,7 +40,7 @@ await split({
 
 This function checks file integrity by verifying the `chunks` with `fileSize` and `totalChunks` parameters. It will return the `status` and the `error` of the check.
 
-```typescript
+```ts
 import { check } from "@filego/js";
 
 await check({
@@ -61,7 +54,7 @@ await check({
  
 This function merges the chunks by using the `chunks` parameters. It will return the `blob` of the merged file.
 
-```typescript
+```ts
 import { merge } from "@filego/js";
 
 await merge({

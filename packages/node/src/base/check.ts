@@ -33,7 +33,7 @@ type CheckOptions = _CheckOptions & {
  *
  * ## Example
  *
- * ```typescript
+ * ```ts
  * import { check } from "@filego/node";
  *
  * await check({

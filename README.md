@@ -6,41 +6,27 @@ A file splitting & merging solution.
 
 For JavaScript/TypeScript environment:
 
-npm:
-
-```bash
+```sh
+# npm
 npm i @filego/js
-```
 
-Yarn:
-
-```bash
+# Yarn
 yarn add @filego/js
-```
 
-pnpm:
-
-```bash
+# pnpm
 pnpm add @filego/js
 ```
 
 For Node environment:
 
-npm:
-
-```bash
+```sh
+# npm
 npm i @filego/node
-```
 
-Yarn:
-
-```bash
+# Yarn
 yarn add @filego/node
-```
 
-pnpm:
-
-```bash
+# pnpm
 pnpm add @filego/node
 ```
 
@@ -48,7 +34,7 @@ pnpm add @filego/node
 
 Split file from a path to a directory directly with `split` function in `@filego/node`.
 
-```typescript
+```ts
 import { split } from "@filego/node";
 
 await split({
