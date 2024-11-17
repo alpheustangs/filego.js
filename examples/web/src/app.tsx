@@ -180,7 +180,11 @@ const App = (): React.JSX.Element => {
             />
             <br />
             <br />
-            <input type="submit" title="Upload" onClick={upload} />
+            <input
+                type="submit"
+                title="Upload"
+                onClick={upload}
+            />
             <br />
             <br />
             <div style={{ color: "red" }}>{error ?? ""}</div>

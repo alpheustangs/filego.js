@@ -80,7 +80,7 @@ const check = async (options: CheckOptions): Promise<CheckResult> => {
     const missing: number[] = [];
 
     for (let i: number = 0; i < totalChunks; i++) {
-        const chunk: FileChunk = sorted[i];
+        const chunk: FileChunk = sorted[i] as FileChunk;
 
         if (chunk && chunk.index === i) {
             actualSize += chunk.blob.size;

@@ -1,7 +1,11 @@
 {
     "private": true,
     "scripts": {
-        "format": "biome check --write .",
+        "fmt": "biome check --write .",
+        "tsc": "npm-run-all --sequential tsc:shared tsc:node tsc:js",
+        "tsc:shared": "cd packages/shared && tsc --noEmit",
+        "tsc:node": "cd packages/node && tsc --noEmit",
+        "tsc:js": "cd packages/js && tsc --noEmit",
         "build": "npm-run-all --sequential build:shared build:node build:js",
         "build:shared": "cd packages/shared && tsup",
         "build:node": "cd packages/node && tsup",
@@ -15,6 +19,8 @@
         "": ""
     },
     "devDependencies": {
+        "@apst/biome": "~0.1.0",
+        "@apst/tsconfig": "~0.1.0",
         "@biomejs/biome": "^1.9.4",
         "@types/node": "^22.9.0",
         "npm-run-all": "^4.1.5",

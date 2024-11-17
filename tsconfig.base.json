@@ -1,14 +1,3 @@
 {
-    "compilerOptions": {
-        "module": "CommonJS",
-        "moduleResolution": "Node10",
-        "resolveJsonModule": true,
-        "downlevelIteration": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "alwaysStrict": true,
-        "skipLibCheck": true
-    }
+    "extends": "@apst/tsconfig/lib"
 }

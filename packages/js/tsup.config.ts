@@ -1,25 +1,26 @@
+import type { Options } from "tsup";
+
 import { defineConfig } from "tsup";
+
+const options: Options = {
+    entry: {
+        index: "./src/index.ts",
+    },
+    minify: true,
+    outDir: "./dist",
+    platform: "neutral",
+};
 
 export default defineConfig([
     {
-        minify: true,
-        platform: "neutral",
+        ...options,
         format: "esm",
-        tsconfig: "./tsconfig.esm.json",
-        entry: {
-            index: "./src/index.ts",
-        },
-        outDir: "./dist",
+        tsconfig: "./tsconfig.json",
     },
     {
-        dts: true,
-        minify: true,
-        platform: "neutral",
+        ...options,
         format: "cjs",
+        dts: true,
         tsconfig: "./tsconfig.cjs.json",
-        entry: {
-            index: "./src/index.ts",
-        },
-        outDir: "./dist",
     },
 ]);
