@@ -6,7 +6,6 @@ const options: Options = {
     entry: {
         index: "./src/index.ts",
     },
-    minify: true,
     outDir: "./dist",
     platform: "neutral",
 };

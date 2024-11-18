@@ -9,10 +9,10 @@ importers:
   .:
     devDependencies:
       '@apst/biome':
-        specifier: ^0.1.0
+        specifier: ~0.1.0
         version: 0.1.0(@biomejs/biome@1.9.4)
       '@apst/tsconfig':
-        specifier: ^0.1.0
+        specifier: ~0.1.0
         version: 0.1.0(typescript@5.6.3)
       '@biomejs/biome':
         specifier: ^1.9.4
