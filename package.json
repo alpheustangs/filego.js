@@ -16,6 +16,9 @@
         "test:js": "cd ./tests/js && pnpm run test",
         "node": "cd ./examples/node && pnpm run dev",
         "web": "cd ./examples/web && pnpm run dev",
+        "doc": "npm-run-all --parallel doc:js doc:node",
+        "doc:js": "cd ./packages/js && typedoc",
+        "doc:node": "cd ./packages/node && typedoc",
         "": ""
     },
     "devDependencies": {
@@ -25,6 +28,8 @@
         "@types/node": "^22.9.1",
         "npm-run-all": "^4.1.5",
         "tsup": "^8.3.5",
+        "typedoc": "^0.26.11",
+        "typedoc-plugin-markdown": "^4.2.10",
         "typescript": "^5.6.3"
     },
     "engines": {

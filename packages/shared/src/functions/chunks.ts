@@ -3,7 +3,7 @@ import type { FileChunk } from "#/@types/chunk";
 /**
  * This function checks whether the `chunks` parameter is an Array of Chunk.
  *
- * ## Example
+ * ### Example
  *
  * ```ts
  * import type { FileChunk } from "@filego/shared";
@@ -33,7 +33,7 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
 /**
  * This function sorts the `chunks` parameter by the `index` property.
  *
- * ## Example
+ * ### Example
  *
  * ```ts
  * import type { Chunk } from "@filego/shared";

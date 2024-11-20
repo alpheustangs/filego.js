@@ -33,7 +33,7 @@ type CheckOptions = _CheckOptions & {
  * the `chunks` with `fileSize` and `totalChunks` parameters.
  * It will return the `status` and the `error` of the check.
  *
- * ## Example
+ * ### Example
  *
  * ```ts
  * import { check } from "@filego/js";

@@ -14,13 +14,6 @@ import { check } from "#/base/check";
 import { merge } from "#/base/merge";
 import { split } from "#/base/split";
 
-const filego = {
-    split,
-    check,
-    merge,
-};
-
-export default filego;
 export type {
     // split
     SplitOptions,

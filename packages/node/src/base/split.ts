@@ -32,7 +32,7 @@ type SplitOptions = _SplitOptions & {
  * This function splits file from a path to a directory directly.
  * It will only return the `fileSize` and the `totalChunks` of the file.
  *
- * ## Example
+ * ### Example
  *
  * ```ts
  * import { split } from "@filego/node";

@@ -41,7 +41,7 @@ const ermsg: string =
  * and the chunks can be used to check and merge later.
  * It will return the `chunks`, `fileSize` and `totalChunks`.
  *
- * ## Example
+ * ### Example
  *
  * ```ts
  * import { split } from "@filego/js";
