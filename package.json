@@ -25,12 +25,12 @@
         "@apst/biome": "~0.1.0",
         "@apst/tsconfig": "~0.1.0",
         "@biomejs/biome": "^1.9.4",
-        "@types/node": "^22.10.0",
+        "@types/node": "^22.10.1",
         "npm-run-all": "^4.1.5",
         "tsup": "^8.3.5",
         "typedoc": "^0.27.1",
         "typedoc-plugin-markdown": "^4.3.0",
-        "typescript": "^5.6.3"
+        "typescript": "^5.7.2"
     },
     "engines": {
         "node": ">=18"
