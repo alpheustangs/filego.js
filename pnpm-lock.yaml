@@ -90,13 +90,13 @@ importers:
         version: 18.3.1
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.2
-        version: 3.7.2(vite@6.0.2(@types/node@22.10.1)(yaml@2.6.1))
+        version: 3.7.2(vite@6.0.3(@types/node@22.10.1)(yaml@2.6.1))
       typescript:
         specifier: ^5.6.3
         version: 5.7.2
       vite:
-        specifier: ^6.0.2
-        version: 6.0.2(@types/node@22.10.1)(yaml@2.6.1)
+        specifier: ^6.0.3
+        version: 6.0.3(@types/node@22.10.1)(yaml@2.6.1)
 
   packages/js:
     dependencies:
@@ -134,8 +134,8 @@ importers:
         specifier: ^25.0.1
         version: 25.0.1
       vite:
-        specifier: ^6.0.2
-        version: 6.0.2(@types/node@22.10.1)(yaml@2.6.1)
+        specifier: ^6.0.3
+        version: 6.0.3(@types/node@22.10.1)(yaml@2.6.1)
 
   tests/node:
     dependencies:
@@ -156,8 +156,8 @@ importers:
         specifier: ^11.0.4
         version: 11.0.4
       vite:
-        specifier: ^6.0.2
-        version: 6.0.2(@types/node@22.10.1)(yaml@2.6.1)
+        specifier: ^6.0.3
+        version: 6.0.3(@types/node@22.10.1)(yaml@2.6.1)
 
   tests/shared:
     dependencies:
@@ -2099,8 +2099,8 @@ packages:
       terser:
         optional: true
 
-  vite@6.0.2:
-    resolution: {integrity: sha512-XdQ+VsY2tJpBsKGs0wf3U/+azx8BBpYRHFAyKm5VeEZNOJZRB63q7Sc8Iup3k0TrN3KO6QgyzFf+opSbfY1y0g==}
+  vite@6.0.3:
+    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2655,10 +2655,10 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
-  '@vitejs/plugin-react-swc@3.7.2(vite@6.0.2(@types/node@22.10.1)(yaml@2.6.1))':
+  '@vitejs/plugin-react-swc@3.7.2(vite@6.0.3(@types/node@22.10.1)(yaml@2.6.1))':
     dependencies:
       '@swc/core': 1.7.26
-      vite: 6.0.2(@types/node@22.10.1)(yaml@2.6.1)
+      vite: 6.0.3(@types/node@22.10.1)(yaml@2.6.1)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -4134,7 +4134,7 @@ snapshots:
       '@types/node': 22.10.1
       fsevents: 2.3.3
 
-  vite@6.0.2(@types/node@22.10.1)(yaml@2.6.1):
+  vite@6.0.3(@types/node@22.10.1)(yaml@2.6.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
