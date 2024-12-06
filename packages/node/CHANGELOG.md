@@ -1,3 +1,14 @@
+## 0.7.0 (2024-12-06)
+
+### Breaking Changes
+
+- Update minimum Node version from `v16` to `v18`
+
+### What's Changed
+
+- Update configurations
+- Update dependencies
+
 ## 0.6.0 (2024-11-14)
 
 ### Breaking Changes

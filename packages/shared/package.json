@@ -1,6 +1,6 @@
 {
     "name": "@filego/shared",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "Internal functions shared by FileGo",
     "keywords": [
         "FileGo",
