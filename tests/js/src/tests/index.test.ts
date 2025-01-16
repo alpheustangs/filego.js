@@ -5,9 +5,10 @@ import type {
     SplitResult,
 } from "@filego/js";
 
+import * as fsp from "node:fs/promises";
+
 import { check, merge, split } from "@filego/js";
 import { getMemUsage } from "@test/shared";
-import * as fse from "fs-extra";
 import { describe, expect, it } from "vitest";
 
 import { chunkSize, inFiles } from "../configs/base";
@@ -15,9 +16,9 @@ import { blobToBase64 } from "../functions/blobToBase64";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {
-        const inFile: string = inFiles[i];
+        const inFile: string = inFiles[i] as string;
         const file: string = inFile.split("/").pop() ?? "";
-        const fileName: string = file.split(".")[0];
+        const fileName: string = file.split(".")[0] as string;
 
         let fileSize: number = 0;
         let totalChunks: number = 0;
@@ -25,7 +26,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split base64 data", async (): Promise<void> => {
             const fileData: string = await blobToBase64(
-                new Blob([await fse.readFile(inFile)]),
+                new Blob([await fsp.readFile(inFile)]),
             );
 
             const result: SplitResult = await split({
@@ -39,7 +40,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split Uint8Array", async (): Promise<void> => {
             const fileData: Uint8Array = new Uint8Array(
-                await fse.readFile(inFile),
+                await fsp.readFile(inFile),
             );
 
             const result: SplitResult = await split({
@@ -53,7 +54,7 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split File", async (): Promise<void> => {
             const fileData: File = new File(
-                [await fse.readFile(inFile)],
+                [await fsp.readFile(inFile)],
                 fileName,
             );
 

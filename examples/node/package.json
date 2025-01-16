@@ -10,11 +10,9 @@
         "@fastify/multipart": "^9.0.2",
         "@filego/node": "workspace:^",
         "fastify": "^5.2.1",
-        "fs-extra": "^11.2.0",
         "stormode-terminal": "^0.2.0"
     },
     "devDependencies": {
-        "@types/fs-extra": "^11.0.4",
         "@types/node": "^22.10.7",
         "stormode": "^0.6.1",
         "typescript": "^5.7.3"

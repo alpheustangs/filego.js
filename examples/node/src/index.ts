@@ -26,6 +26,9 @@ import { terminal } from "#/utils/terminal";
         // media
         await server.register(FastifyMultipart, {
             attachFieldsToBody: true,
+            limits: {
+                fileSize: 100 * 1024 * 1024,
+            },
         } as FastifyMultipartAttachFieldsToBodyOptions);
 
         // use router

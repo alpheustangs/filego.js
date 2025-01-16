@@ -1,9 +1,9 @@
 import type { MultipartFile, MultipartValue } from "@fastify/multipart";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
+import * as fs from "node:fs";
+import * as fsp from "node:fs/promises";
 import * as path from "node:path";
-
-import * as fse from "fs-extra";
 
 import { cacheRoot, isDev } from "#/configs/env";
 
@@ -45,8 +45,13 @@ const uploadFile = async (
             });
         }
 
-        await fse.ensureDir(path.join(cacheRoot, id));
-        await fse.writeFile(path.join(cacheRoot, id, index.toString()), buffer);
+        const cacheDir: string = path.join(cacheRoot, id);
+
+        if (!fs.existsSync(cacheDir)) {
+            await fsp.mkdir(cacheDir, { recursive: true });
+        }
+
+        await fsp.writeFile(path.join(cacheDir, index.toString()), buffer);
 
         return reply.code(200).send({
             status: "success",

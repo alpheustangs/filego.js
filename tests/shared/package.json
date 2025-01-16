@@ -6,11 +6,5 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc"
-    },
-    "dependencies": {
-        "fs-extra": "^11.2.0"
-    },
-    "devDependencies": {
-        "@types/fs-extra": "^11.0.4"
     }
 }

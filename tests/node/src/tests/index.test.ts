@@ -3,6 +3,7 @@ import type {
     SplitResult as NodeSplitResult,
 } from "@filego/node";
 
+import * as fs from "node:fs";
 import * as path from "node:path";
 
 import {
@@ -11,16 +12,15 @@ import {
     split as nodeSplit,
 } from "@filego/node";
 import { getMemUsage } from "@test/shared";
-import * as fse from "fs-extra";
 import { describe, expect, it } from "vitest";
 
 import { cacheRoot, chunkSize, inFiles, outRoot } from "../configs/base";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {
-        const inFile: string = inFiles[i];
+        const inFile: string = inFiles[i] as string;
         const file: string = inFile.split("/").pop() ?? "";
-        const fileName: string = file.split(".")[0];
+        const fileName: string = file.split(".")[0] as string;
         const fileExt: string = file.split(".").pop() ?? "";
 
         const cacheDir: string = path.resolve(cacheRoot, fileName);
@@ -44,7 +44,7 @@ describe("tests for split, check and merge", (): void => {
             expect(true).toBe(typeof result.fileSize === "number");
             expect(true).toBe(typeof result.totalChunks === "number");
             result.fileSize > 0 &&
-                expect(await fse.exists(path.resolve(cacheDir, `${0}`))).toBe(
+                expect(fs.existsSync(path.resolve(cacheDir, `${0}`))).toBe(
                     true,
                 );
 
@@ -94,7 +94,7 @@ describe("tests for split, check and merge", (): void => {
 
             getMemUsage({ name: "@filego/node merge" });
 
-            expect(await fse.exists(outFile)).toBe(true);
+            expect(fs.existsSync(outFile)).toBe(true);
         });
     }
 });
