@@ -8,7 +8,7 @@
     "dependencies": {
         "@filego/node": "workspace:^",
         "@test/shared": "workspace:^",
-        "vitest": "^3.0.1"
+        "vitest": "^3.0.2"
     },
     "devDependencies": {
         "vite": "^6.0.7"
