@@ -7,7 +7,7 @@
     },
     "dependencies": {
         "@fastify/cors": "^10.0.2",
-        "@fastify/multipart": "^9.0.2",
+        "@fastify/multipart": "^9.0.3",
         "@filego/node": "workspace:^",
         "fastify": "^5.2.1",
         "stormode-terminal": "^0.2.0"
