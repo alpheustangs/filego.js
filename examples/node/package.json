@@ -13,7 +13,7 @@
         "stormode-terminal": "^0.2.0"
     },
     "devDependencies": {
-        "@types/node": "^22.13.1",
+        "@types/node": "^22.13.4",
         "stormode": "^0.6.1",
         "typescript": "^5.7.3"
     }
