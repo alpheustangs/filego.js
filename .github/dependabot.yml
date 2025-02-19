@@ -6,3 +6,6 @@ updates:
           interval: "daily"
           time: "00:00"
           timezone: "Etc/UTC"
+      ignore:
+          - dependency-name: "@types/node"
+            versions: [">=19"]

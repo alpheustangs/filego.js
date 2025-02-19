@@ -6,7 +6,7 @@ export default defineConfig({
     },
     test: {
         include: ["src/tests/**/*.test.{js,jsx,ts,tsx}"],
-        environment: "jsdom",
+        environment: "happy-dom",
         root: process.cwd(),
         testTimeout: 1000 * 60,
         maxConcurrency: 1,
