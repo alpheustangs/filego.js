@@ -9,7 +9,7 @@
         "@filego/js": "workspace:^",
         "@test/shared": "workspace:^",
         "happy-dom": "^17.1.1",
-        "vitest": "^3.0.5"
+        "vitest": "^3.0.6"
     },
     "devDependencies": {
         "vite": "^6.1.1"
