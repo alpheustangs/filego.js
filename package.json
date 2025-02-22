@@ -26,7 +26,7 @@
         "@apst/tsconfig": "~0.1.0",
         "@biomejs/biome": "^1.9.4",
         "@types/node": "^18.19.76",
-        "npm-run-all": "^4.1.5",
+        "npm-run-all2": "^7.0.2",
         "tsup": "^8.3.6",
         "typedoc": "~0.27.7",
         "typedoc-plugin-markdown": "^4.4.2",
