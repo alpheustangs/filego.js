@@ -56,7 +56,7 @@ Check out the Web and API examples:
 
 For the example of web in React, please refer to [examples/web](./examples/web/).
 
-For the example of Node in Fastify, please refer to [examples/node](./examples/node/).
+For the example of Node in Hono, please refer to [examples/node](./examples/node/).
 
 ## License
 
