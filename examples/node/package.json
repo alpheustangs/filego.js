@@ -1,20 +1,18 @@
 {
     "private": true,
     "scripts": {
-        "dev": "stormode dev",
-        "build": "tsc && stormode build",
-        "preview": "stormode preview"
+        "dev": "NODE_ENV=development tsx ./src/index.ts",
+        "build": "tsc && tsc-alias",
+        "start": "cd ./dist && node index.js"
     },
     "dependencies": {
-        "@fastify/cors": "^10.0.2",
-        "@fastify/multipart": "^9.0.3",
         "@filego/node": "workspace:^",
-        "fastify": "^5.2.1",
-        "stormode-terminal": "^0.2.0"
+        "@hono/node-server": "^1.13.8",
+        "hono": "^4.7.2",
+        "tsc-alias": "^1.8.10"
     },
     "devDependencies": {
-        "@types/node": "^22.13.4",
-        "stormode": "^0.6.1",
+        "tsx": "^4.19.3",
         "typescript": "^5.7.3"
     }
 }

@@ -1,16 +1,60 @@
-import type { FastifyInstance } from "fastify";
+import type { Context } from "hono";
 
-import { checkFile } from "#/controllers/check";
-import { mergeFile } from "#/controllers/merge";
-import { uploadFile } from "#/controllers/upload";
+import type { ServiceResponse } from "#/@types/response";
 
-const route = (server: FastifyInstance): void => {
-    // route
-    server.post("/upload", uploadFile);
+import { Hono } from "hono";
 
-    server.post("/check", checkFile);
+import { serviceCheck } from "#/services/check";
+import { serviceMerge } from "#/services/merge";
+import { serviceUpload } from "#/services/upload";
 
-    server.post("/merge", mergeFile);
+const router: Hono = new Hono();
+
+router.get(
+    "/",
+    (c: Context): Response =>
+        c.json({
+            success: true,
+        }),
+);
+
+type ParsedBody = {
+    [x: string]: string | File;
 };
 
-export default route;
+router.post("/upload", async (c: Context): Promise<Response> => {
+    const body: ParsedBody = await c.req.parseBody();
+
+    const response: ServiceResponse = await serviceUpload({
+        id: body.id as string,
+        index: Number.parseInt(body.index as string),
+        blob: body.blob as Blob,
+    });
+
+    return c.json(response[1], response[0]);
+});
+
+router.post("/check", async (c: Context): Promise<Response> => {
+    const body: ParsedBody = await c.req.parseBody();
+
+    const response: ServiceResponse = await serviceCheck({
+        id: body.id as string,
+        fileSize: Number.parseInt(body.fileSize as string),
+        totalChunks: Number.parseInt(body.totalChunks as string),
+    });
+
+    return c.json(response[1], response[0]);
+});
+
+router.post("/merge", async (c: Context): Promise<Response> => {
+    const body: ParsedBody = await c.req.parseBody();
+
+    const response: ServiceResponse = await serviceMerge({
+        id: body.id as string,
+        name: body.name as string,
+    });
+
+    return c.json(response[1], response[0]);
+});
+
+export { router };

@@ -1,45 +1,24 @@
-import type { FastifyCorsOptions } from "@fastify/cors";
-import type { FastifyMultipartAttachFieldsToBodyOptions } from "@fastify/multipart";
-import type { FastifyInstance } from "fastify";
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
+import { cors } from "hono/cors";
 
-import FastifyCors from "@fastify/cors";
-import FastifyMultipart from "@fastify/multipart";
-import Fastify from "fastify";
+import { port } from "#/configs";
+import { router } from "#/router";
 
-import { isDev, port } from "#/configs/env";
+const app = new Hono();
 
-import route from "#/router";
+app.use(
+    cors({
+        origin: (origin: string): string => origin,
+        allowMethods: ["GET", "POST"],
+    }),
+);
 
-import { terminal } from "#/utils/terminal";
+app.route("/", router);
 
-// listener
-(async (): Promise<void> => {
-    try {
-        const server: FastifyInstance = Fastify();
+serve({
+    fetch: app.fetch,
+    port,
+});
 
-        // cors
-        await server.register(FastifyCors, {
-            origin: true,
-            methods: ["POST"],
-        } as FastifyCorsOptions);
-
-        // media
-        await server.register(FastifyMultipart, {
-            attachFieldsToBody: true,
-            limits: {
-                fileSize: 100 * 1024 * 1024,
-            },
-        } as FastifyMultipartAttachFieldsToBodyOptions);
-
-        // use router
-        route(server);
-
-        // listen
-        await server.listen({ host: "0.0.0.0", port: port });
-        const msg: string = `Server running on: http://0.0.0.0:${port}`;
-        terminal.ready(msg);
-    } catch (e: unknown) {
-        isDev && terminal.error(e);
-        process.exit(1);
-    }
-})();
+console.log(`Server running on port: ${port}`);

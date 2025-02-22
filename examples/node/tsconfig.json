@@ -1,21 +1,14 @@
 {
+    "extends": "../../tsconfig.app.json",
     "compilerOptions": {
-        "target": "ES2021",
-        "useDefineForClassFields": true,
         "module": "CommonJS",
-        "moduleResolution": "Node10",
         "baseUrl": ".",
         "paths": {
             "#/*": ["./src/*"]
         },
-        "resolveJsonModule": true,
-        "noEmit": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "alwaysStrict": true,
-        "skipLibCheck": true
+        "rootDir": "./src",
+        "moduleResolution": "node10",
+        "outDir": "./dist"
     },
-    "include": ["src/**/*"]
+    "include": ["./src/**/*"]
 }
