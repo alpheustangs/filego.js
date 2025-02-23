@@ -8,6 +8,10 @@ import { serviceCheck } from "#/services/check";
 import { serviceMerge } from "#/services/merge";
 import { serviceUpload } from "#/services/upload";
 
+type ParsedBody = {
+    [x: string]: string | File;
+};
+
 const router: Hono = new Hono();
 
 router.get(
@@ -17,10 +21,6 @@ router.get(
             success: true,
         }),
 );
-
-type ParsedBody = {
-    [x: string]: string | File;
-};
 
 router.post("/upload", async (c: Context): Promise<Response> => {
     const body: ParsedBody = await c.req.parseBody();

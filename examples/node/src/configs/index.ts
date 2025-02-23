@@ -1,7 +1,6 @@
 import * as path from "node:path";
 
-const cwd: string = process.cwd();
-const root: string = path.resolve(cwd);
+const root: string = path.resolve(process.cwd());
 
 const isDev: boolean = process.env.NODE_ENV === "development";
 const isPrd: boolean = !isDev;

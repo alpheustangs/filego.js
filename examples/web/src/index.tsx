@@ -5,9 +5,7 @@ import App from "./app.tsx";
 
 const root: HTMLElement | null = document.getElementById("root");
 
-if (!root) {
-    throw new Error("root not found");
-}
+if (!root) throw new Error("root not found");
 
 ReactDOM.createRoot(root).render(
     <React.StrictMode>

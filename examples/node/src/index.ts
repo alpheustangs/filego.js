@@ -7,12 +7,7 @@ import { router } from "#/router";
 
 const app = new Hono();
 
-app.use(
-    cors({
-        origin: (origin: string): string => origin,
-        allowMethods: ["GET", "POST"],
-    }),
-);
+app.use(cors());
 
 app.route("/", router);
 
