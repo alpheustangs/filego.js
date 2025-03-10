@@ -8,7 +8,7 @@
     "dependencies": {
         "@filego/js": "workspace:^",
         "@test/shared": "workspace:^",
-        "happy-dom": "^17.3.0",
+        "happy-dom": "^17.4.3",
         "vitest": "^3.0.8"
     },
     "devDependencies": {
