@@ -109,11 +109,11 @@ importers:
         specifier: workspace:^
         version: link:../shared
       happy-dom:
-        specifier: ^17.3.0
-        version: 17.3.0
+        specifier: ^17.4.3
+        version: 17.4.3
       vitest:
         specifier: ^3.0.8
-        version: 3.0.8(@types/node@18.19.80)(happy-dom@17.3.0)(tsx@4.19.3)(yaml@2.7.0)
+        version: 3.0.8(@types/node@18.19.80)(happy-dom@17.4.3)(tsx@4.19.3)(yaml@2.7.0)
     devDependencies:
       vite:
         specifier: ^6.2.0
@@ -129,7 +129,7 @@ importers:
         version: link:../shared
       vitest:
         specifier: ^3.0.8
-        version: 3.0.8(@types/node@18.19.80)(happy-dom@17.3.0)(tsx@4.19.3)(yaml@2.7.0)
+        version: 3.0.8(@types/node@18.19.80)(happy-dom@17.4.3)(tsx@4.19.3)(yaml@2.7.0)
     devDependencies:
       vite:
         specifier: ^6.2.0
@@ -826,8 +826,8 @@ packages:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
 
-  happy-dom@17.3.0:
-    resolution: {integrity: sha512-dTwlpUHrhE0usQOd1Df9k461SOYQUWNl0G31mXCDj+N9//oPcDb+cchrSJzrXN6qxZ5sZSrLf5AfY702Zvddfw==}
+  happy-dom@17.4.3:
+    resolution: {integrity: sha512-8mDGIKxi2hAg0DkEYjBHPi5QykWiqdNNQQWrwLXLfro1eAZk8+lSnzbUrnU25bamG9PjEQGoFrA32ezQNJQdww==}
     engines: {node: '>=18.0.0'}
 
   hono@4.7.4:
@@ -1913,7 +1913,7 @@ snapshots:
       merge2: 1.4.1
       slash: 3.0.0
 
-  happy-dom@17.3.0:
+  happy-dom@17.4.3:
     dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
@@ -2317,7 +2317,7 @@ snapshots:
       tsx: 4.19.3
       yaml: 2.7.0
 
-  vitest@3.0.8(@types/node@18.19.80)(happy-dom@17.3.0)(tsx@4.19.3)(yaml@2.7.0):
+  vitest@3.0.8(@types/node@18.19.80)(happy-dom@17.4.3)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 3.0.8
       '@vitest/mocker': 3.0.8(vite@6.2.0(@types/node@18.19.80)(tsx@4.19.3)(yaml@2.7.0))
@@ -2341,7 +2341,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 18.19.80
-      happy-dom: 17.3.0
+      happy-dom: 17.4.3
     transitivePeerDependencies:
       - jiti
       - less
