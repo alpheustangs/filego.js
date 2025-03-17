@@ -11,6 +11,6 @@
         "vitest": "^3.0.8"
     },
     "devDependencies": {
-        "vite": "^6.2.1"
+        "vite": "^6.2.2"
     }
 }
