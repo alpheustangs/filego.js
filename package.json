@@ -25,7 +25,7 @@
         "@apst/biome": "~0.1.0",
         "@apst/tsconfig": "~0.1.0",
         "@biomejs/biome": "^1.9.4",
-        "@types/node": "^18.19.80",
+        "@types/node": "^18.19.83",
         "npm-run-all2": "^7.0.2",
         "tsup": "^8.4.0",
         "typedoc": "~0.28.1",
