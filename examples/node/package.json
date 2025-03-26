@@ -7,7 +7,7 @@
     },
     "dependencies": {
         "@filego/node": "workspace:^",
-        "@hono/node-server": "^1.13.8",
+        "@hono/node-server": "^1.14.0",
         "hono": "^4.7.5",
         "tsc-alias": "^1.8.11"
     },
