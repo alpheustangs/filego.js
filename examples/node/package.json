@@ -1,18 +1,20 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "NODE_ENV=development tsx ./src/index.ts",
-        "build": "tsc && tsc-alias",
+        "dev": "vite",
+        "build": "tsc --noEmit && vite build",
         "start": "cd ./dist && node index.js"
     },
     "dependencies": {
         "@filego/node": "workspace:^",
         "@hono/node-server": "^1.14.0",
-        "hono": "^4.7.5",
-        "tsc-alias": "^1.8.13"
+        "hono": "^4.7.5"
     },
     "devDependencies": {
-        "tsx": "^4.19.3",
-        "typescript": "^5.8.2"
+        "@hono/vite-build": "^1.5.0",
+        "@hono/vite-dev-server": "~0.19.0",
+        "vite": "^6.2.4",
+        "vite-tsconfig-paths": "^5.1.4"
     }
 }

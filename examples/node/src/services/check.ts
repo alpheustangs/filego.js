@@ -6,7 +6,7 @@ import * as path from "node:path";
 
 import { check } from "@filego/node";
 
-import { cacheRoot } from "#/configs";
+import { ROOT_CACHE } from "#/configs";
 
 type ServiceCheckInput = {
     id: string;
@@ -43,7 +43,7 @@ const serviceCheck = async ({
         const result: CheckResult = await check({
             fileSize,
             totalChunks,
-            inDir: path.join(cacheRoot, id),
+            inDir: path.join(ROOT_CACHE, id),
         });
 
         if (result.success === false) {

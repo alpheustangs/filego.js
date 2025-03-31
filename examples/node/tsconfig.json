@@ -1,14 +1,10 @@
 {
     "extends": "../../tsconfig.app.json",
     "compilerOptions": {
-        "module": "CommonJS",
         "baseUrl": ".",
         "paths": {
             "#/*": ["./src/*"]
-        },
-        "rootDir": "./src",
-        "moduleResolution": "node10",
-        "outDir": "./dist"
+        }
     },
     "include": ["./src/**/*"]
 }

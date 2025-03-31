@@ -1,13 +1,11 @@
 import * as path from "node:path";
 
-const root: string = path.resolve(process.cwd());
+export const ROOT: string = path.resolve(process.cwd());
 
-const isDev: boolean = process.env.NODE_ENV === "development";
-const isPrd: boolean = !isDev;
+export const IS_DEV: boolean = process.env.NODE_ENV === "development";
+export const IS_PRD: boolean = process.env.NODE_ENV === "production";
 
-const port: number = isDev ? 4001 : 4000;
+export const PORT: number = IS_DEV ? 4001 : 4000;
 
-const uploadRoot: string = path.join(root, ".media", "uploads");
-const cacheRoot: string = path.join(root, ".media", "cache");
-
-export { root, isDev, isPrd, port, uploadRoot, cacheRoot };
+export const ROOT_UPLOAD: string = path.join(ROOT, ".media", "uploads");
+export const ROOT_CACHE: string = path.join(ROOT, ".media", "cache");

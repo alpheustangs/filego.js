@@ -4,7 +4,7 @@ import * as path from "node:path";
 
 import { merge } from "@filego/node";
 
-import { cacheRoot, uploadRoot } from "#/configs";
+import { ROOT_CACHE, ROOT_UPLOAD } from "#/configs";
 
 type ServiceMergeInput = {
     id: string;
@@ -31,8 +31,8 @@ const serviceMerge = async ({
         }
 
         await merge({
-            inDir: path.join(cacheRoot, id),
-            outFile: path.join(uploadRoot, id, name),
+            inDir: path.join(ROOT_CACHE, id),
+            outFile: path.join(ROOT_UPLOAD, id, name),
         });
 
         return [

@@ -4,7 +4,7 @@ import * as fs from "node:fs";
 import * as fsp from "node:fs/promises";
 import * as path from "node:path";
 
-import { cacheRoot } from "#/configs";
+import { ROOT_CACHE } from "#/configs";
 
 type ServiceUploadInput = {
     id: string;
@@ -40,7 +40,7 @@ const serviceUpload = async ({
         const buffer: ArrayBuffer = await blob.arrayBuffer();
         const uint8Array: Uint8Array = new Uint8Array(buffer);
 
-        const cacheDir: string = path.join(cacheRoot, id);
+        const cacheDir: string = path.join(ROOT_CACHE, id);
 
         if (!fs.existsSync(cacheDir)) {
             await fsp.mkdir(cacheDir, { recursive: true });

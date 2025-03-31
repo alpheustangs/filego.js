@@ -1,19 +1,21 @@
-import { serve } from "@hono/node-server";
+import * as path from "node:path";
+
+import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 
-import { port } from "#/configs";
+import { ROOT } from "#/configs";
 import { router } from "#/router";
 
-const app = new Hono();
+const app: Hono = new Hono();
 
 app.use(cors());
 
 app.route("/", router);
 
-serve({
-    fetch: app.fetch,
-    port,
-});
+app.use(
+    "*",
+    serveStatic({ root: path.relative(ROOT, path.join(ROOT, "public")) }),
+);
 
-console.log(`Server running on port: ${port}`);
+export default app;
