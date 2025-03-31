@@ -9,7 +9,7 @@
         "@filego/node": "workspace:^",
         "@hono/node-server": "^1.14.0",
         "hono": "^4.7.5",
-        "tsc-alias": "^1.8.11"
+        "tsc-alias": "^1.8.13"
     },
     "devDependencies": {
         "tsx": "^4.19.3",
