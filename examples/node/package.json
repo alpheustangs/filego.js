@@ -9,7 +9,7 @@
     "dependencies": {
         "@filego/node": "workspace:^",
         "@hono/node-server": "^1.14.0",
-        "hono": "^4.7.5"
+        "hono": "^4.7.6"
     },
     "devDependencies": {
         "@hono/vite-build": "^1.5.0",
