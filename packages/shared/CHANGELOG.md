@@ -1,3 +1,9 @@
+## 0.8.0
+
+### What's New
+
+- Add sourcemap support
+
 ## 0.7.0 (2024-12-06)
 
 ### What's Changed

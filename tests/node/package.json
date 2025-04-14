@@ -1,4 +1,5 @@
 {
+    "name": "test-node",
     "private": true,
     "type": "module",
     "scripts": {
@@ -7,10 +8,6 @@
     },
     "dependencies": {
         "@filego/node": "workspace:^",
-        "@test/shared": "workspace:^",
-        "vitest": "^3.1.1"
-    },
-    "devDependencies": {
-        "vite": "^6.2.6"
+        "@test/shared": "workspace:^"
     }
 }

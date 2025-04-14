@@ -11,11 +11,11 @@
         "build:node": "cd packages/node && tsup",
         "build:js": "cd packages/js && tsup",
         "test": "npm-run-all --sequential test:shared test:node test:js",
-        "test:shared": "cd ./tests/shared && pnpm run build",
-        "test:node": "cd ./tests/node && pnpm run test",
-        "test:js": "cd ./tests/js && pnpm run test",
-        "node": "cd ./examples/node && pnpm run dev",
-        "web": "cd ./examples/web && pnpm run dev",
+        "test:shared": "cd ./tests/shared && tsc",
+        "test:node": "cd ./tests/node && vitest run",
+        "test:js": "cd ./tests/js && vitest run",
+        "node": "cd ./examples/node && vite",
+        "web": "cd ./examples/web && vite",
         "doc": "npm-run-all --parallel doc:js doc:node",
         "doc:js": "cd ./packages/js && typedoc",
         "doc:node": "cd ./packages/node && typedoc",
@@ -30,7 +30,9 @@
         "tsup": "^8.4.0",
         "typedoc": "~0.28.2",
         "typedoc-plugin-markdown": "^4.6.2",
-        "typescript": "^5.8.3"
+        "typescript": "^5.8.3",
+        "vite": "^6.2.6",
+        "vitest": "^3.1.1"
     },
     "engines": {
         "node": ">=18"

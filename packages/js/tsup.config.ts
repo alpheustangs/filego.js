@@ -6,6 +6,7 @@ const options: Options = {
     entry: {
         index: "./src/index.ts",
     },
+    sourcemap: true,
     outDir: "./dist",
     platform: "neutral",
 };
