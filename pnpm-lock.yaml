@@ -42,8 +42,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/node
       '@hono/node-server':
-        specifier: ^1.14.0
-        version: 1.14.0(hono@4.7.6)
+        specifier: ^1.14.1
+        version: 1.14.1(hono@4.7.6)
       hono:
         specifier: ^4.7.6
         version: 4.7.6
@@ -511,8 +511,8 @@ packages:
   '@gerrit0/mini-shiki@3.2.2':
     resolution: {integrity: sha512-vaZNGhGLKMY14HbF53xxHNgFO9Wz+t5lTlGNpl2N9xFiKQ0I5oIe0vKjU9dh7Nb3Dw6lZ7wqUE0ri+zcdpnK+Q==}
 
-  '@hono/node-server@1.14.0':
-    resolution: {integrity: sha512-YUCxJwgHRKSqjrdTk9e4VMGKN27MK5r4+MGPyZTgKH+IYbK+KtYbHeOcPGJ91KGGD6RIQiz2dAHxvjauNhOS8g==}
+  '@hono/node-server@1.14.1':
+    resolution: {integrity: sha512-vmbuM+HPinjWzPe7FFPWMMQMsbKE9gDPhaH0FFdqbGpkT5lp++tcWDTxwBl5EgS5y6JVgIaCdjeHRfQ4XRBRjQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1722,7 +1722,7 @@ snapshots:
       '@shikijs/types': 3.2.1
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.14.0(hono@4.7.6)':
+  '@hono/node-server@1.14.1(hono@4.7.6)':
     dependencies:
       hono: 4.7.6
 
@@ -1732,7 +1732,7 @@ snapshots:
 
   '@hono/vite-dev-server@0.19.0(hono@4.7.6)':
     dependencies:
-      '@hono/node-server': 1.14.0(hono@4.7.6)
+      '@hono/node-server': 1.14.1(hono@4.7.6)
       hono: 4.7.6
       minimatch: 9.0.5
 
