@@ -49,17 +49,17 @@ importers:
         version: link:../../packages/node
       '@hono/node-server':
         specifier: ^1.14.1
-        version: 1.14.1(hono@4.7.6)
+        version: 1.14.1(hono@4.7.7)
       hono:
-        specifier: ^4.7.6
-        version: 4.7.6
+        specifier: ^4.7.7
+        version: 4.7.7
     devDependencies:
       '@hono/vite-build':
         specifier: ^1.6.0
-        version: 1.6.0(hono@4.7.6)
+        version: 1.6.0(hono@4.7.7)
       '@hono/vite-dev-server':
         specifier: ~0.19.0
-        version: 0.19.0(hono@4.7.6)
+        version: 0.19.0(hono@4.7.7)
       vite:
         specifier: ^6.2.6
         version: 6.2.6(@types/node@18.19.86)(yaml@2.7.1)
@@ -1046,8 +1046,8 @@ packages:
     resolution: {integrity: sha512-/Pb0ctk3HTZ5xEL3BZ0hK1AqDSAUuRQitOmROPHhfUYEWpmTImwfD8vFDGADmMAX0JYgbcgxWoLFKtsWhcpuVA==}
     engines: {node: '>=18.0.0'}
 
-  hono@4.7.6:
-    resolution: {integrity: sha512-564rVzELU+9BRqqx5k8sT2NFwGD3I3Vifdb6P7CmM6FiarOSY+fDC+6B+k9wcCb86ReoayteZP2ki0cRLN1jbw==}
+  hono@4.7.7:
+    resolution: {integrity: sha512-2PCpQRbN87Crty8/L/7akZN3UyZIAopSoRxCwRbJgUuV1+MHNFHzYFxZTg4v/03cXUm+jce/qa2VSBZpKBm3Qw==}
     engines: {node: '>=16.9.0'}
 
   is-fullwidth-code-point@3.0.0:
@@ -1714,18 +1714,18 @@ snapshots:
       '@shikijs/types': 3.2.1
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.14.1(hono@4.7.6)':
+  '@hono/node-server@1.14.1(hono@4.7.7)':
     dependencies:
-      hono: 4.7.6
+      hono: 4.7.7
 
-  '@hono/vite-build@1.6.0(hono@4.7.6)':
+  '@hono/vite-build@1.6.0(hono@4.7.7)':
     dependencies:
-      hono: 4.7.6
+      hono: 4.7.7
 
-  '@hono/vite-dev-server@0.19.0(hono@4.7.6)':
+  '@hono/vite-dev-server@0.19.0(hono@4.7.7)':
     dependencies:
-      '@hono/node-server': 1.14.1(hono@4.7.6)
-      hono: 4.7.6
+      '@hono/node-server': 1.14.1(hono@4.7.7)
+      hono: 4.7.7
       minimatch: 9.0.5
 
   '@isaacs/cliui@8.0.2':
@@ -2182,7 +2182,7 @@ snapshots:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
 
-  hono@4.7.6: {}
+  hono@4.7.7: {}
 
   is-fullwidth-code-point@3.0.0: {}
 
