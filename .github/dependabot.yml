@@ -9,3 +9,5 @@ updates:
       ignore:
           - dependency-name: "@types/node"
             versions: [">=19"]
+          - dependency-name: "npm-run-all2"
+            versions: [">=8"]
