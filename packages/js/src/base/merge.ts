@@ -26,6 +26,7 @@ type MergeOptions = _MergeOptions & {
 
 /**
  * This function merges the chunks by using the `chunks` parameters.
+ *
  * It will return the `blob` of the merged file.
  *
  * ### Example

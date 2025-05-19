@@ -44,11 +44,13 @@ await split({
 });
 ```
 
-## Documentation
+## APIs
 
-For the usage of `@filego/js`, please refer to the [JS documentation](./docs/js/README.md).
+For the JS package APIs,
+please refer to the [JS APIs](./apis/js/README.md).
 
-For the usage of `@filego/node`, please refer to the [Node documentation](./docs/node/README.md).
+For the Node package APIs,
+please refer to the [Node APIs](./apis/node/README.md).
 
 ## Examples
 

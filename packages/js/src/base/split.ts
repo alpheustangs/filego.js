@@ -39,6 +39,7 @@ const ermsg: string =
 /**
  * This function splits file into chunks,
  * and the chunks can be used to check and merge later.
+ *
  * It will return the `chunks`, `fileSize` and `totalChunks`.
  *
  * ### Example

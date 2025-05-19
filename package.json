@@ -16,9 +16,9 @@
         "test:js": "cd ./tests/js && vitest run",
         "node": "cd ./examples/node && vite",
         "web": "cd ./examples/web && vite",
-        "doc": "npm-run-all --parallel doc:js doc:node",
-        "doc:js": "cd ./packages/js && typedoc",
-        "doc:node": "cd ./packages/node && typedoc",
+        "api": "npm-run-all --parallel api:js api:node",
+        "api:js": "cd ./packages/js && typedoc",
+        "api:node": "cd ./packages/node && typedoc",
         "": ""
     },
     "devDependencies": {

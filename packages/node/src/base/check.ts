@@ -29,6 +29,7 @@ type CheckOptions = _CheckOptions & {
 /**
  * This function checks file integrity by verifying the chunks specified
  * in the `inDir` with `fileSize`, `totalChunks` parameters.
+ *
  * It will return the `status` and the `error` of the check.
  *
  * ### Example

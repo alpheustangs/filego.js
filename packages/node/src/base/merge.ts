@@ -18,6 +18,7 @@ type MergeOptions = _MergeOptions & {
 
 /**
  * This function merges the chunks from a directory to a specified path directly.
+ *
  * Therefore, nothing will be returned as a result.
  *
  * ### Example

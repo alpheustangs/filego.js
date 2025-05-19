@@ -9,18 +9,17 @@ const options: Options = {
     sourcemap: true,
     outDir: "./dist",
     platform: "neutral",
+    tsconfig: "./tsconfig.json",
 };
 
 export default defineConfig([
     {
         ...options,
         format: "esm",
-        tsconfig: "./tsconfig.json",
     },
     {
         ...options,
         format: "cjs",
         dts: true,
-        tsconfig: "./tsconfig.cjs.json",
     },
 ]);
