@@ -55,8 +55,8 @@ importers:
         version: 4.7.10
     devDependencies:
       '@hono/vite-build':
-        specifier: ^1.6.1
-        version: 1.6.1(hono@4.7.10)
+        specifier: ^1.6.2
+        version: 1.6.2(hono@4.7.10)
       '@hono/vite-dev-server':
         specifier: ~0.19.1
         version: 0.19.1(hono@4.7.10)
@@ -359,8 +359,8 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hono/vite-build@1.6.1':
-    resolution: {integrity: sha512-M60p0cAWgEbYiGa+1j35Ljqcef8s2N5EhpQMWrH1N6fSid5jKD2+D2t1+AntI8HZbgC5VDdpk4QzcEuLMPCgsA==}
+  '@hono/vite-build@1.6.2':
+    resolution: {integrity: sha512-wM1KZelUcLiPABYSe/1YtveCkHJxaZ42e68naRznUPKrfVYPAC7wE8Itilmxa81ICZKhb1tBOQ7CHxtGF5dLGw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '*'
@@ -1519,7 +1519,7 @@ snapshots:
     dependencies:
       hono: 4.7.10
 
-  '@hono/vite-build@1.6.1(hono@4.7.10)':
+  '@hono/vite-build@1.6.2(hono@4.7.10)':
     dependencies:
       hono: 4.7.10
 
