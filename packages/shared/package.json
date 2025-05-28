@@ -19,15 +19,15 @@
         "blob",
         "blobs",
         "ts",
-        "TypeScript",
+        "typescript",
         "js",
-        "JavaScript"
+        "javascript"
     ],
-    "homepage": "https://github.com/alpheustangs/filego.js",
-    "bugs": "https://github.com/alpheustangs/filego.js/issues",
+    "homepage": "https://github.com/alpheus-day/filego.js",
+    "bugs": "https://github.com/alpheus-day/filego.js/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alpheustangs/filego.js.git",
+        "url": "https://github.com/alpheus-day/filego.js.git",
         "directory": "packages/shared"
     },
     "license": "MIT",
