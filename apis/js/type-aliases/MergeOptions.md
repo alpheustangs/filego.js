@@ -6,7 +6,7 @@
 type MergeOptions = _MergeOptions & object;
 ```
 
-Defined in: [js/src/base/merge.ts:20](https://github.com/alpheusday/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/js/src/base/merge.ts#L20)
+Defined in: [js/src/base/merge.ts:20](https://github.com/alpheusday/filego.js/blob/1095b0b506cd20e40c6b51a386af0e8a45d893fb/packages/js/src/base/merge.ts#L20)
 
 Options for the `merge` function.
 

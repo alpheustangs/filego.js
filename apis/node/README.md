@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @filego/node v0.7.0
+# @filego/node v0.8.0
 
 ## Type Aliases
 
