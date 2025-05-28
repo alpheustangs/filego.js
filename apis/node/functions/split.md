@@ -6,7 +6,7 @@
 function split(options): Promise<SplitResult>;
 ```
 
-Defined in: [node/src/base/split.ts:48](https://github.com/alpheus-day/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/node/src/base/split.ts#L48)
+Defined in: [node/src/base/split.ts:48](https://github.com/alpheusday/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/node/src/base/split.ts#L48)
 
 This function splits file from a path to a directory directly.
 

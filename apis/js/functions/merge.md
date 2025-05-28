@@ -6,7 +6,7 @@
 function merge(options): Promise<MergeResult>;
 ```
 
-Defined in: [js/src/base/merge.ts:42](https://github.com/alpheus-day/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/js/src/base/merge.ts#L42)
+Defined in: [js/src/base/merge.ts:42](https://github.com/alpheusday/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/js/src/base/merge.ts#L42)
 
 This function merges the chunks by using the `chunks` parameters.
 

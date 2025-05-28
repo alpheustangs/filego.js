@@ -6,7 +6,7 @@
 function split(options): Promise<SplitResult>;
 ```
 
-Defined in: [js/src/base/split.ts:58](https://github.com/alpheus-day/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/js/src/base/split.ts#L58)
+Defined in: [js/src/base/split.ts:58](https://github.com/alpheusday/filego.js/blob/0b6198ac40a1ab78f90e02a6ab2598047e19ad06/packages/js/src/base/split.ts#L58)
 
 This function splits file into chunks,
 and the chunks can be used to check and merge later.
