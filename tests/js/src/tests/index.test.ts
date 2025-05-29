@@ -11,8 +11,8 @@ import { check, merge, split } from "@filego/js";
 import { getMemUsage } from "@test/shared";
 import { describe, expect, it } from "vitest";
 
-import { chunkSize, inFiles } from "../configs/base";
-import { blobToBase64 } from "../functions/blobToBase64";
+import { chunkSize, inFiles } from "#/configs/base";
+import { blobToBase64 } from "#/functions/blobToBase64";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {

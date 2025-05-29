@@ -1,0 +1,13 @@
+{
+    "name": "benchmark-js",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "bench": "vitest bench --run",
+        "": ""
+    },
+    "dependencies": {
+        "@filego/js": "workspace:~",
+        "@filego/node": "workspace:~"
+    }
+}

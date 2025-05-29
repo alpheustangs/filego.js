@@ -14,7 +14,7 @@ import {
 import { getMemUsage } from "@test/shared";
 import { describe, expect, it } from "vitest";
 
-import { cacheRoot, chunkSize, inFiles, outRoot } from "../configs/base";
+import { cacheRoot, chunkSize, inFiles, outRoot } from "#/configs/base";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {
