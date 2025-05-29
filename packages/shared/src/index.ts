@@ -1,13 +1,33 @@
-import type { CheckResult } from "#/@types/check";
-import type { FileChunk } from "#/@types/chunk";
+export type {
+    SplitFunctionOptions,
+    SplitIoFunctionOptions,
+    SplitOptions,
+    SplitIoOptions,
+    SplitResult,
+    SplitIoResult,
+} from "#/@types/functions/split";
 
-import { isTypeOfFileChunks, sortFileChunks } from "#/functions/chunks";
+export type {
+    CheckFunctionOptions,
+    CheckIoFunctionOptions,
+    CheckOptions,
+    CheckIoOptions,
+    CheckResultError,
+    CheckResult,
+} from "#/@types/functions/check";
 
-const shared = {
+export type {
+    MergeFunctionOptions,
+    MergeIoFunctionOptions,
+    MergeOptions,
+    MergeIoOptions,
+    MergeResult,
+} from "#/@types/functions/merge";
+
+export type { FileChunk } from "#/@types/chunk";
+
+export {
     isTypeOfFileChunks,
+    isTypeOfFileChunk,
     sortFileChunks,
-};
-
-export default shared;
-export type { FileChunk, CheckResult };
-export { isTypeOfFileChunks, sortFileChunks };
+} from "#/functions/chunks";

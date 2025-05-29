@@ -1,11 +1,9 @@
-import type { SplitResult } from "@filego/js";
-import type { SplitResult as NodeSplitResult } from "@filego/node";
+import type { SplitResult } from "@filego/node";
 
 import * as fsp from "node:fs/promises";
 import * as path from "node:path";
 
-import { split } from "@filego/js";
-import { split as nodeSplit } from "@filego/node";
+import { split } from "@filego/node";
 
 const getFile = async (): Promise<Buffer<ArrayBufferLike>> => {
     return await fsp.readFile(
@@ -31,20 +29,4 @@ const outFile: string = path.resolve(
     "test.jpg",
 );
 
-const preNodeSplit = async (): Promise<NodeSplitResult> => {
-    return await nodeSplit({
-        inFile,
-        outDir: cacheDir,
-        chunkSize,
-    });
-};
-
-export {
-    getFile,
-    chunkSize,
-    preSplit,
-    inFile,
-    cacheDir,
-    outFile,
-    preNodeSplit,
-};
+export { getFile, chunkSize, preSplit, inFile, cacheDir, outFile };

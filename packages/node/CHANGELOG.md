@@ -1,3 +1,26 @@
+## 0.9.0
+
+### Breaking Changes
+
+- Rename types:
+    - `SplitFunctionOptions` -> `SplitIoFunctionOptions`
+    - `SplitOptions` -> `SplitIoOptions`
+    - `SplitResult` -> `SplitIoResult`
+    - `SplitResult` -> `SplitIoResult`
+    - `CheckFunctionOptions` -> `CheckIoFunctionOptions`
+    - `CheckOptions` -> `CheckIoOptions`
+    - `MergeFunctionOptions` -> `MergeIoFunctionOptions`
+    - `MergeOptions` -> `MergeIoOptions`
+
+### What's New
+
+- Add `FileChunk` and `CheckResultError` types
+- Add `isTypeOfFileChunks` and `isTypeOfFileChunk` functions
+
+### What's Changed
+
+- Compatible with `@filego/js` types and functions by default
+
 ## 0.8.0 (2025-05-28)
 
 ### What's New

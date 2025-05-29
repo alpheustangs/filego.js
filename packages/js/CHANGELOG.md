@@ -1,3 +1,14 @@
+## 0.9.0
+
+### What's New
+
+- Export `CheckResultError` type
+- Export `isTypeOfFileChunks` and `isTypeOfFileChunk` functions
+
+### What's Changed
+
+- Optimize `merge` function
+
 ## 0.8.0 (2025-05-28)
 
 ### What's New

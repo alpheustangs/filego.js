@@ -4,7 +4,7 @@ A file splitting & merging solution.
 
 ## Quick Start
 
-Split file from a path with `split` function.
+Split file into chunks with `split` function:
 
 ```ts
 import { split } from "@filego/js";

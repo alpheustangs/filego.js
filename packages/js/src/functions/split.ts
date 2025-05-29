@@ -1,37 +1,4 @@
-import type { FileChunk } from "@filego/shared";
-
-type _SplitOptions = {
-    /**
-     * file to split, which accepts:
-     * - File / Blob
-     * - Uint8Array data
-     * - Base64 data prefixed with "data:"
-     */
-    file: File | Blob | Uint8Array | string;
-    /** The size of each chunk in byte. */
-    chunkSize: number;
-};
-
-/** Options for the custom split function in the `split` function. */
-type SplitFunctionOptions = _SplitOptions;
-
-/** Result of the `split` function. */
-type SplitResult = {
-    /** The chunks splitted from the original file. */
-    chunks: FileChunk[];
-    /** Size of the original file. */
-    fileSize: number;
-    /** The total number of chunks splitted from the original file. */
-    totalChunks: number;
-};
-
-/** Options for the `split` function. */
-type SplitOptions = _SplitOptions & {
-    /** Custom split function for the `split` function. */
-    splitFunction?: (
-        options: SplitFunctionOptions,
-    ) => SplitResult | Promise<SplitResult>;
-};
+import type { FileChunk, SplitOptions, SplitResult } from "@filego/shared";
 
 const ermsg: string =
     "file is not a File, Blob, file URI, Uint8Array or Base64 data";
@@ -57,18 +24,6 @@ const ermsg: string =
  */
 const split = async (options: SplitOptions): Promise<SplitResult> => {
     const { file, chunkSize, splitFunction }: SplitOptions = options;
-
-    if (!file || (typeof file === "string" && file.trim() === "")) {
-        throw new TypeError(ermsg);
-    }
-
-    if (typeof chunkSize !== "number" || chunkSize <= 0) {
-        throw new TypeError("chunkSize is not a positive number");
-    }
-
-    if (splitFunction && typeof splitFunction !== "function") {
-        throw new TypeError("splitFunction is not a function");
-    }
 
     // custom split function
 
@@ -123,5 +78,4 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     };
 };
 
-export type { SplitOptions, SplitFunctionOptions, SplitResult };
 export { split };

@@ -1,37 +1,24 @@
-import type { FileChunk } from "@filego/shared";
-import type {
-    CheckFunctionOptions,
-    CheckOptions,
-    CheckResult,
-} from "#/base/check";
-import type {
-    MergeFunctionOptions,
-    MergeOptions,
-    MergeResult,
-} from "#/base/merge";
-import type {
-    SplitFunctionOptions,
-    SplitOptions,
-    SplitResult,
-} from "#/base/split";
-
-import { check } from "#/base/check";
-import { merge } from "#/base/merge";
-import { split } from "#/base/split";
-
 export type {
     FileChunk,
     // split
-    SplitOptions,
     SplitFunctionOptions,
+    SplitOptions,
     SplitResult,
     // check
-    CheckOptions,
     CheckFunctionOptions,
+    CheckOptions,
+    CheckResultError,
     CheckResult,
     // merge
-    MergeOptions,
     MergeFunctionOptions,
+    MergeOptions,
     MergeResult,
-};
-export { split, check, merge };
+} from "@filego/shared";
+
+export { isTypeOfFileChunks, isTypeOfFileChunk } from "@filego/shared";
+
+export { split } from "#/functions/split";
+
+export { check } from "#/functions/check";
+
+export { merge } from "#/functions/merge";

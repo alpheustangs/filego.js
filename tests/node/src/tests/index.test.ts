@@ -1,6 +1,6 @@
 import type {
     CheckResult as NodeCheckResult,
-    SplitResult as NodeSplitResult,
+    SplitIoResult as NodeSplitResult,
 } from "@filego/node";
 
 import * as fs from "node:fs";

@@ -1,51 +1,11 @@
 import type { WriteStream } from "node:fs";
 
-type _MergeOptions = {
-    /** Input directory to be merged in the `merge` function. */
-    inDir: string;
-    /** Output file after merging in the `merge` function. */
-    outFile: string;
-};
+import type { MergeIoOptions, MergeOptions, MergeResult } from "@filego/shared";
 
-/** Options for the custom merge function in the `merge` function. */
-type MergeFunctionOptions = _MergeOptions;
+import { merge as _merge } from "@filego/js";
 
-/** Options for the `merge` function. */
-type MergeOptions = _MergeOptions & {
-    /** Custom merge function for the `merge` function. */
-    mergeFunction?: (options: MergeFunctionOptions) => void | Promise<void>;
-};
-
-/**
- * This function merges the chunks from a directory to a specified path directly.
- *
- * Therefore, nothing will be returned as a result.
- *
- * ### Example
- *
- * ```ts
- * import { merge } from "@filego/node";
- *
- * await merge({
- *     inDir: "/path/to/dir",
- *     outFile: "/path/to/file.txt",
- * });
- * ```
- */
-const merge = async (options: MergeOptions): Promise<void> => {
-    const { inDir, outFile, mergeFunction }: MergeOptions = options;
-
-    if (typeof inDir !== "string") {
-        throw new TypeError("inDir is not a directory in string");
-    }
-
-    if (typeof outFile !== "string") {
-        throw new TypeError("outFile is not a path in string");
-    }
-
-    if (mergeFunction && typeof mergeFunction !== "function") {
-        throw new TypeError("mergeFunction is not a function");
-    }
+const mergeIo = async (options: MergeIoOptions): Promise<boolean> => {
+    const { inDir, outFile, mergeFunction }: MergeIoOptions = options;
 
     // custom
 
@@ -117,7 +77,50 @@ const merge = async (options: MergeOptions): Promise<void> => {
 
         write();
     });
+
+    return true;
 };
 
-export type { MergeOptions, MergeFunctionOptions };
+/**
+ * This function merges the chunks by using the `chunks` parameters.
+ *
+ * It will return the `blob` of the merged file.
+ *
+ * ### Example
+ *
+ * ```ts
+ * import { merge } from "@filego/node";
+ *
+ * await merge({
+ *     chunks: [], // result from split function...
+ * });
+ * ```
+ */
+async function merge(options: MergeOptions): Promise<MergeResult>;
+
+/**
+ * This function merges the chunks from a directory to a specified path directly.
+ *
+ * It will return `true` as the result.
+ *
+ * ### Example
+ *
+ * ```ts
+ * import { merge } from "@filego/node";
+ *
+ * await merge({
+ *     inDir: "/path/to/dir",
+ *     outFile: "/path/to/file.txt",
+ * });
+ * ```
+ */
+async function merge(options: MergeIoOptions): Promise<boolean>;
+
+async function merge(
+    options: MergeOptions | MergeIoOptions,
+): Promise<MergeResult | boolean> {
+    if ("chunks" in options) return await _merge(options);
+    return await mergeIo(options);
+}
+
 export { merge };

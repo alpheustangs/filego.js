@@ -31,6 +31,25 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
 };
 
 /**
+ * This function checks whether the `chunk` object is a Chunk.
+ *
+ * ### Example
+ *
+ * ```ts
+ * import type { FileChunk } from "@filego/shared";
+ * import { isTypeOfFileChunk } from "@filego/shared";
+ *
+ * const chunk: FileChunk = {
+ *     // ...
+ * };
+ * const result: boolean = isTypeOfFileChunks(chunks);
+ * ```
+ */
+const isTypeOfFileChunk = (chunk: FileChunk): boolean => {
+    return isTypeOfFileChunks([chunk]);
+};
+
+/**
  * This function sorts the `chunks` parameter by the `index` property.
  *
  * ### Example
@@ -49,4 +68,4 @@ const sortFileChunks = (array: FileChunk[]): FileChunk[] => {
     );
 };
 
-export { isTypeOfFileChunks, sortFileChunks };
+export { isTypeOfFileChunks, isTypeOfFileChunk, sortFileChunks };

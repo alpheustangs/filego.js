@@ -1,6 +1,6 @@
 {
     "name": "@filego/node",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "description": "A file splitting & merging solution",
     "keywords": [
         "filego",
@@ -46,6 +46,7 @@
     "types": "./dist/index.d.ts",
     "files": ["dist"],
     "dependencies": {
+        "@filego/js": "workspace:~",
         "@filego/shared": "workspace:~"
     },
     "engines": {

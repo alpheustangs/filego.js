@@ -1,7 +1,6 @@
-import type { SplitResult } from "@filego/js";
+import type { SplitResult } from "@filego/node";
 
-import { merge } from "@filego/js";
-import { merge as nodeMerge } from "@filego/node";
+import { merge } from "@filego/node";
 import { bench, describe } from "vitest";
 
 import { cacheDir, outFile, preSplit } from "#/configs";
@@ -16,7 +15,7 @@ describe("Merge", async (): Promise<void> => {
     });
 
     bench("Node", async (): Promise<void> => {
-        await nodeMerge({
+        await merge({
             inDir: cacheDir,
             outFile,
         });

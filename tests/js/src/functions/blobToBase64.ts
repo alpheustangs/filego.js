@@ -4,7 +4,7 @@ const blobToBase64 = (blob: Blob): Promise<string> => {
 
         reader.onload = (): void => {
             const base64String: string = reader.result as string;
-            const data: string = base64String.split(",")[1];
+            const data: string = base64String.split(",")[1] as string;
             resolve(`data:${blob.type};base64,${data}`);
         };
 

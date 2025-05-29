@@ -1,3 +1,10 @@
+## 0.9.0
+
+### What's New
+
+- Add `isTypeOfFileChunk` function
+- Combine Types from `@filego/js` and `@filego/node`
+
 ## 0.8.0 (2025-05-28)
 
 ### What's New

@@ -15,9 +15,15 @@ yarn add @filego/js
 
 # pnpm
 pnpm add @filego/js
+
+# Deno
+deno add npm:@filego/js
+
+# Bun
+bun add @filego/js
 ```
 
-For Node environment:
+For Node.js, Deno, and Bun runtime environment:
 
 ```sh
 # npm
@@ -28,11 +34,28 @@ yarn add @filego/node
 
 # pnpm
 pnpm add @filego/node
+
+# Deno
+deno add npm:@filego/node
+
+# Bun
+bun add @filego/node
 ```
 
 ## Quick Start
 
-Split file from a path to a directory directly with `split` function in `@filego/node`.
+Easily split a file into chunks using the split function from `@filego/js`, or work directly with the file system using `@filego/node`.
+
+```ts
+import { split } from "@filego/js";
+
+const file: File | Blob | Uint8Array | string = "";
+
+await split({
+    file,
+    chunkSize: 2 * 1024 * 1024,
+});
+```
 
 ```ts
 import { split } from "@filego/node";

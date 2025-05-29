@@ -50,9 +50,6 @@ importers:
 
   bench:
     dependencies:
-      '@filego/js':
-        specifier: workspace:~
-        version: link:../packages/js
       '@filego/node':
         specifier: workspace:~
         version: link:../packages/node
@@ -115,11 +112,18 @@ importers:
 
   packages/node:
     dependencies:
+      '@filego/js':
+        specifier: workspace:~
+        version: link:../js
       '@filego/shared':
         specifier: workspace:~
         version: link:../shared
 
-  packages/shared: {}
+  packages/shared:
+    dependencies:
+      ts-vista:
+        specifier: ~0.2.2
+        version: 0.2.2
 
   tests/js:
     dependencies:
@@ -1214,6 +1218,9 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
+  ts-vista@0.2.2:
+    resolution: {integrity: sha512-QhuUrGs8WwGgHy1iUOfMztvLE0XB3EH4hFjw6rFGpStav5os7keIx9EHfJTBSpaPdlE3MmGBwVFAbTjDjROFuQ==}
+
   tsconfck@3.1.5:
     resolution: {integrity: sha512-CLDfGgUp7XPswWnezWwsCRxNmgQjhYq3VXHM0/XIRxhVrKw0M1if9agzryh1QS3nxjCROvV+xWxoJO1YctzzWg==}
     engines: {node: ^18 || >=20}
@@ -2262,6 +2269,8 @@ snapshots:
   tree-kill@1.2.2: {}
 
   ts-interface-checker@0.1.13: {}
+
+  ts-vista@0.2.2: {}
 
   tsconfck@3.1.5(typescript@5.8.3):
     optionalDependencies:
