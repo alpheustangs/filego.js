@@ -21,8 +21,8 @@ importers:
         specifier: ^18.19.110
         version: 18.19.110
       happy-dom:
-        specifier: ^17.5.6
-        version: 17.5.6
+        specifier: ^17.6.1
+        version: 17.6.1
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -46,7 +46,7 @@ importers:
         version: 5.1.4(typescript@5.8.3)(vite@6.3.5(@types/node@18.19.110)(yaml@2.8.0))
       vitest:
         specifier: ^3.2.0
-        version: 3.2.0(@types/node@18.19.110)(happy-dom@17.5.6)(yaml@2.8.0)
+        version: 3.2.0(@types/node@18.19.110)(happy-dom@17.6.1)(yaml@2.8.0)
 
   bench:
     dependencies:
@@ -933,8 +933,8 @@ packages:
   globrex@0.1.2:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
-  happy-dom@17.5.6:
-    resolution: {integrity: sha512-B4U6jKuiizwCJ2WP0YreQmRdeBrHKOXhpz7YUbbwdSAKfWEhdG4UfWZOZTZ5Oejs/9yJtk7xmbfp8YdVL9LVFA==}
+  happy-dom@17.6.1:
+    resolution: {integrity: sha512-x2Iie2VWObB283X/KXwJ7g5f+4acfm8Pmf9KWUn6gujFUvFlSWytZYTv74bdFH40fPDedbI6/V6U3dYYMtW4SQ==}
     engines: {node: '>=18.0.0'}
 
   hono@4.7.11:
@@ -2006,7 +2006,7 @@ snapshots:
 
   globrex@0.1.2: {}
 
-  happy-dom@17.5.6:
+  happy-dom@17.6.1:
     dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
@@ -2405,7 +2405,7 @@ snapshots:
       fsevents: 2.3.3
       yaml: 2.8.0
 
-  vitest@3.2.0(@types/node@18.19.110)(happy-dom@17.5.6)(yaml@2.8.0):
+  vitest@3.2.0(@types/node@18.19.110)(happy-dom@17.6.1)(yaml@2.8.0):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.0
@@ -2432,7 +2432,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 18.19.110
-      happy-dom: 17.5.6
+      happy-dom: 17.6.1
     transitivePeerDependencies:
       - jiti
       - less
