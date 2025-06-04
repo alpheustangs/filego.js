@@ -27,11 +27,11 @@ const mergeIo = async (options: MergeIoOptions): Promise<boolean> => {
 
     // check if the input directory exists
     if (!fs.existsSync(inDir)) {
-        throw new Error("Input direcotry not found");
+        throw new Error("Input directory not found");
     }
 
     if (!fs.statSync(inDir).isDirectory()) {
-        throw new TypeError("Input direcotry is not a direcotry");
+        throw new TypeError("Input directory is not a directory");
     }
 
     // remove and create

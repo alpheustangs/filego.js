@@ -9,5 +9,5 @@ updates:
       ignore:
           - dependency-name: "@types/node"
             versions: [">=19"]
-          - dependency-name: "npm-run-all2"
-            versions: [">=8"]
+          - dependency-name: "happy-dom"
+            versions: [">=17.6.2"]
