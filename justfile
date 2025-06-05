@@ -16,6 +16,9 @@ test_shared := "./tests/shared/"
 test_js := "./tests/js/"
 test_node := "./tests/node/"
 
+eap_node := "./examples/node/"
+eap_web := "./examples/web/"
+
 # Default action
 _:
     just lint
@@ -82,14 +85,36 @@ api:
 
 # Clean builds
 clean:
+    rm -rf ./{{eap_node}}/dist
+    rm -rf ./{{eap_web}}/web/dist
+
     rm -rf ./{{shared}}/dist
     rm -rf ./{{js}}/dist
     rm -rf ./{{node}}/dist
 
+    rm -rf ./{{test_shared}}/dist
+
+clean-media:
+    rm -rf ./bench/.media
+    rm -rf ./{{test_node}}/.media
+
 # Clean everything
 clean-all:
     rm -rf ./node_modules
+
+    rm -rf ./bench/node_modules
+
+    rm -rf ./{{eap_node}}/node_modules
+    rm -rf ./{{eap_web}}/node_modules
+
     rm -rf ./{{shared}}/node_modules
     rm -rf ./{{js}}/node_modules
     rm -rf ./{{node}}/node_modules
+
+    rm -rf ./{{test_shared}}/node_modules
+    rm -rf ./{{test_js}}/node_modules
+    rm -rf ./{{test_node}}/node_modules
+
     just clean
+
+    just clean-media
